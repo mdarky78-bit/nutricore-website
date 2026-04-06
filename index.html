@@ -195,60 +195,65 @@ h3 {
 }
 .pill-card {
   background: var(--white);
-  border: 1px solid var(--cream-dark);
   border-radius: 8px;
-  padding: 32px 24px 28px;
-  cursor: pointer;
-  transition: all .28s ease;
-  position: relative;
   overflow: hidden;
-}
-/* pink top border reveal on hover */
-.pill-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 3px; background: var(--pink);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .3s ease;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--cream-dark);
+  transition: transform .28s ease, box-shadow .28s ease;
 }
 .pill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,.1);
   border-color: transparent;
-  box-shadow: 0 16px 48px rgba(3,152,158,.14);
-  transform: translateY(-5px);
 }
-.pill-card:hover::before { transform: scaleX(1); }
-
-/* icon — PNG displayed large, teal-tinted via CSS */
-.pill-img {
-  width: 72px; height: 72px;
+/* coloured top band — alternating teal/pink */
+.pill-band {
+  height: 88px;
+  position: relative; overflow: hidden;
+  flex-shrink: 0;
+}
+.pill-card:nth-child(1) .pill-band { background: var(--teal); }
+.pill-card:nth-child(2) .pill-band { background: var(--pink); }
+.pill-card:nth-child(3) .pill-band { background: var(--teal-dark); }
+.pill-card:nth-child(4) .pill-band { background: var(--pink); }
+.pill-card:nth-child(5) .pill-band { background: var(--teal); }
+/* ghost oversized number as graphic on the band */
+.pill-band-num {
+  font-family: var(--head); font-weight: 700;
+  font-size: 96px; line-height: 1; letter-spacing: -.06em;
+  color: rgba(255,255,255,.15);
+  position: absolute; right: 8px; bottom: -10px;
+  pointer-events: none; user-select: none;
+}
+/* icon — transparent PNG, filtered white to show on coloured band */
+.pill-icon {
+  position: absolute; left: 16px; top: 50%;
+  transform: translateY(-50%);
+  width: 52px; height: 52px;
   object-fit: contain;
-  display: block;
-  margin-bottom: 20px;
-  /* Black icons on white — tint them teal */
-  filter: invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);
-  transition: filter .28s ease;
+  filter: invert(1) brightness(2);
+  opacity: .92;
 }
-.pill-card:hover .pill-img {
-  /* Shift to pink on hover */
-  filter: invert(52%) sepia(86%) saturate(500%) hue-rotate(290deg) brightness(105%) contrast(100%);
+/* card body */
+.pill-body {
+  padding: 22px 20px 26px;
+  flex: 1; display: flex; flex-direction: column;
 }
-
 .pill-num {
-  font-family: var(--head); font-size: 11px; font-weight: 700;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: var(--teal); display: block; margin-bottom: 10px;
-  transition: color .28s;
+  font-family: var(--body); font-size: 10px; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text); display: block; margin-bottom: 8px;
 }
-.pill-card:hover .pill-num { color: var(--pink); }
 .pill-name {
-  font-family: var(--head); font-size: 17px; font-weight: 700;
-  letter-spacing: -.01em; color: var(--teal); display: block; margin-bottom: 8px;
-  transition: color .28s;
+  font-family: var(--head); font-size: 18px; font-weight: 700;
+  letter-spacing: -.01em; color: var(--teal);
+  display: block; margin-bottom: 10px;
 }
-.pill-card:hover .pill-name { color: var(--text-dark); }
+.pill-card:nth-child(2) .pill-name,
+.pill-card:nth-child(4) .pill-name { color: var(--pink); }
 .pill-desc {
   font-family: var(--body); font-size: 12.5px; font-weight: 300;
-  color: var(--text); line-height: 1.6;
+  color: var(--text); line-height: 1.6; flex: 1;
 }
 
 /* =============================================
@@ -450,10 +455,9 @@ h3 {
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <svg viewBox="0 0 38 38" fill="none">
-        <path d="M19 33L8.5 22.5C5.5 19.5 5.5 14.5 8.5 11.5C11.5 8.5 16 8.5 19 11.5C22 8.5 26.5 8.5 29.5 11.5C32.5 14.5 32.5 19.5 29.5 22.5L19 33Z" stroke="#03989e" stroke-width="1.6" fill="rgba(3,152,158,.08)"/>
-        <path d="M11 19.5H14.5L16.5 15.5L19.5 23L21.5 17.5L23 19.5H27" stroke="#03989e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <img src="logo-mark.png" alt="Nutricore Health logomark"
+           style="width:38px;height:38px;object-fit:contain;flex-shrink:0;
+                  filter:invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);">
       <div class="logo-words">
         <strong>Nutricore Health</strong>
         <span>Women's Coaching</span>
@@ -511,38 +515,63 @@ h3 {
   <div class="pillars-row">
 
     <div class="pill-card rv d1">
-      <img src="icon-sleep.png" alt="Sleep" class="pill-img">
-      <span class="pill-num">01</span>
-      <span class="pill-name">Sleep</span>
-      <p class="pill-desc">Quality rest changes everything. We find what's disrupting yours and fix it.</p>
+      <div class="pill-band">
+        <img src="icon-sleep.png" alt="Sleep" class="pill-icon">
+        <span class="pill-band-num">01</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">01</span>
+        <span class="pill-name">Sleep</span>
+        <p class="pill-desc">Quality rest changes everything. We find what's disrupting yours and fix it.</p>
+      </div>
     </div>
 
     <div class="pill-card rv d2">
-      <img src="icon-stress.png" alt="Stress" class="pill-img">
-      <span class="pill-num">02</span>
-      <span class="pill-name">Stress</span>
-      <p class="pill-desc">Cortisol is doing more damage than you think. We work on the real drivers.</p>
+      <div class="pill-band">
+        <img src="icon-stress.png" alt="Stress" class="pill-icon">
+        <span class="pill-band-num">02</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">02</span>
+        <span class="pill-name">Stress</span>
+        <p class="pill-desc">Cortisol is doing more damage than you think. We work on the real drivers.</p>
+      </div>
     </div>
 
     <div class="pill-card rv d3">
-      <img src="icon-nutrition.png" alt="Nutrition" class="pill-img">
-      <span class="pill-num">03</span>
-      <span class="pill-name">Nutrition</span>
-      <p class="pill-desc">Food that works for your hormones, your gut, and your actual life.</p>
+      <div class="pill-band">
+        <img src="icon-nutrition.png" alt="Nutrition" class="pill-icon">
+        <span class="pill-band-num">03</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">03</span>
+        <span class="pill-name">Nutrition</span>
+        <p class="pill-desc">Food that works for your hormones, your gut, and your actual life.</p>
+      </div>
     </div>
 
     <div class="pill-card rv d4">
-      <img src="icon-movement.png" alt="Movement" class="pill-img">
-      <span class="pill-num">04</span>
-      <span class="pill-name">Movement</span>
-      <p class="pill-desc">The right kind for where you are right now — not what worked in your 20s.</p>
+      <div class="pill-band">
+        <img src="icon-movement.png" alt="Movement" class="pill-icon">
+        <span class="pill-band-num">04</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">04</span>
+        <span class="pill-name">Movement</span>
+        <p class="pill-desc">The right kind for where you are right now — not what worked in your 20s.</p>
+      </div>
     </div>
 
     <div class="pill-card rv d4">
-      <img src="icon-joy.png" alt="Joy" class="pill-img">
-      <span class="pill-num">05</span>
-      <span class="pill-name">Joy</span>
-      <p class="pill-desc">The most overlooked pillar. What lights you up belongs in your health plan.</p>
+      <div class="pill-band">
+        <img src="icon-joy.png" alt="Joy" class="pill-icon">
+        <span class="pill-band-num">05</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">05</span>
+        <span class="pill-name">Joy</span>
+        <p class="pill-desc">The most overlooked pillar. What lights you up belongs in your health plan.</p>
+      </div>
     </div>
 
   </div>
