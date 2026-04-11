@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1:1 Health Coaching | Nutricore Health</title>
+<meta name="description" content="A structured 12-week health coaching programme for women 35+. Evidence-informed, practical, and built around your life. Meet Marie and Helen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   NUTRICORE HEALTH — BRAND SYSTEM v5
+   coaching.html
+============================================ */
+:root {
+  --teal:       #03989e;
+  --teal-dark:  #027a80;
+  --teal-deep:  #0d3d40;
+  --teal-pale:  #eaf5f6;
+  --teal-mid:   #b2dfe2;
+  --pink:       #ff66c4;
+  --pink-pale:  #fff0f9;
+  --cream:      #f5f0eb;
+  --cream-dark: #e8e0d6;
+  --white:      #ffffff;
+  --text:       #5c5c5c;
+  --text-dark:  #3a3a3a;
+  --head:       'DM Sans', sans-serif;
+  --body:       'Poppins', sans-serif;
+  --max:        1140px;
+  --r:          5px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.wrap   { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.sec    { padding: 100px 0; }
+.sec-sm { padding: 68px 0; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--body);
+  font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 16px;
+}
+h2 {
+  font-family: var(--head); font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 700; line-height: 1.06; letter-spacing: -.018em; color: var(--teal);
+}
+h3 {
+  font-family: var(--head); font-size: clamp(18px, 2vw, 23px);
+  font-weight: 700; line-height: 1.15; letter-spacing: -.015em; color: var(--teal);
+}
+.lead     { font-size: 17px; font-weight: 300; line-height: 1.78; color: var(--text); }
+.body-txt { font-size: 15px; font-weight: 300; line-height: 1.72; color: var(--text); }
+.tc { color: var(--teal); } .pk { color: var(--pink); }
+
+.btn {
+  display: inline-block; font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .13em; text-transform: uppercase; padding: 15px 32px;
+  border-radius: var(--r); border: 2px solid transparent; transition: all .22s ease;
+}
+.btn-teal  { background: var(--teal);  color: #fff; border-color: var(--teal); }
+.btn-teal:hover  { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(3,152,158,.22); }
+.btn-out   { background: transparent; color: var(--teal); border-color: var(--teal); }
+.btn-out:hover   { background: var(--teal); color: #fff; transform: translateY(-1px); }
+.btn-white { background: var(--white); color: var(--teal-dark); border-color: var(--white); }
+.btn-white:hover { background: transparent; color: var(--white); transform: translateY(-1px); }
+.btn-outw  { background: transparent; color: rgba(255,255,255,.88); border-color: rgba(255,255,255,.4); }
+.btn-outw:hover  { background: rgba(255,255,255,.1); transform: translateY(-1px); }
+
+.rv { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+.rv.in { opacity: 1; transform: none; }
+.d1{transition-delay:.07s} .d2{transition-delay:.14s} .d3{transition-delay:.21s} .d4{transition-delay:.28s}
+
+/* =============================================
+   NAV
+============================================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(245,240,235,.97); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cream-dark); transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(13,61,64,.07); }
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between; height: 70px;
+}
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-words strong { display: block; font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); }
+.logo-words span   { display: block; font-family: var(--body); font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--text); margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; color: var(--text); transition: color .2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--teal); transform: scaleX(0); transition: transform .2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--teal); }
+.nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { font-family: var(--body); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 12px 22px; border-radius: var(--r); transition: all .2s; }
+.nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+.mob { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 199; padding: 40px; flex-direction: column; overflow-y: auto; transform: translateX(100%); transition: transform .3s ease; }
+.mob.open { transform: none; }
+.mob a { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); padding: 16px 0; border-bottom: 1px solid var(--cream-dark); display: block; }
+.mob .btn { margin-top: 28px; display: block; text-align: center; }
+
+/* =============================================
+   HERO — Register 1
+============================================= */
+.hero {
+  min-height: 88vh; background: var(--teal);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-top: 70px; overflow: hidden; position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(140deg, var(--teal-dark) 0%, var(--teal) 55%, #04adb4 100%);
+  pointer-events: none;
+}
+.hero-panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 42%; z-index: 1;
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 0; }
+.hero-dots {
+  position: absolute; top: 120px; left: 48px; z-index: 2;
+  width: 130px; height: 130px;
+  background-image: radial-gradient(circle, rgba(255,255,255,.16) 1.5px, transparent 1.5px);
+  background-size: 20px 20px; pointer-events: none;
+}
+.hero-bar { position: absolute; top: 0; left: 0; width: 4px; height: 200px; background: var(--pink); border-radius: 0 3px 3px 0; opacity: .7; z-index: 2; }
+.hero-content { position: relative; z-index: 3; padding: 60px 48px 90px; max-width: var(--max); margin: 0 auto; width: 100%; }
+.hero-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; animation: fu .8s ease both; }
+.hero-tag-line { width: 28px; height: 2px; background: var(--pink); border-radius: 2px; }
+.hero-tag-text { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.62); }
+.hero h1 {
+  font-family: var(--head); font-size: clamp(48px, 7vw, 90px);
+  font-weight: 700; line-height: .96; letter-spacing: -.025em;
+  color: #fff; max-width: 580px; margin-bottom: 24px; animation: fu .8s .1s ease both;
+}
+.hero h1 .pk { color: var(--pink); }
+.hero-sub { font-family: var(--body); font-size: 17px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,.72); max-width: 400px; margin-bottom: 44px; animation: fu .8s .2s ease both; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fu .8s .3s ease both; }
+
+/* quick proof strip */
+.proof-strip {
+  background: var(--teal-deep);
+  padding: 20px 0;
+}
+.proof-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; gap: 48px; flex-wrap: wrap;
+}
+.proof-item {
+  display: flex; align-items: center; gap: 10px;
+}
+.proof-item svg { width: 16px; height: 16px; stroke: var(--pink); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.proof-item span { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .04em; color: rgba(255,255,255,.65); }
+.proof-div { width: 1px; height: 20px; background: rgba(255,255,255,.12); flex-shrink: 0; }
+
+/* =============================================
+   WHAT'S INCLUDED — Register 3 cream
+============================================= */
+.included { background: var(--cream); }
+.inc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.inc-photo { aspect-ratio: 4/5; min-height: 460px; overflow: hidden; border-radius: var(--r); }
+.inc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.inc-text h2 { margin-bottom: 18px; }
+.inc-text .lead { margin-bottom: 36px; }
+
+.inc-items { display: flex; flex-direction: column; gap: 0; margin-bottom: 36px; }
+.inc-item {
+  display: grid; grid-template-columns: 48px 1fr; gap: 0;
+  padding: 20px 0; border-bottom: 1px solid var(--cream-dark);
+  align-items: flex-start;
+}
+.inc-item:first-child { border-top: 1px solid var(--cream-dark); }
+.inc-num {
+  font-family: var(--head); font-size: 28px; font-weight: 700;
+  letter-spacing: -.04em; color: var(--teal-mid); line-height: 1;
+  padding-top: 2px;
+}
+.inc-detail strong {
+  display: block; font-family: var(--head); font-size: 15px; font-weight: 700;
+  color: var(--text-dark); letter-spacing: -.01em; margin-bottom: 3px;
+}
+.inc-detail span { font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.55; }
+
+/* =============================================
+   HOW IT WORKS — Register 4 teal (disruptive)
+============================================= */
+.how { background: var(--teal); position: relative; overflow: hidden; }
+.how::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  pointer-events: none;
+}
+.how-inner { position: relative; z-index: 1; }
+.how-top { margin-bottom: 64px; display: flex; align-items: flex-end; gap: 40px; justify-content: space-between; }
+.how-top h2 { color: #fff; flex-shrink: 0; }
+.how-top p { font-family: var(--body); font-size: 15px; font-weight: 300; color: rgba(255,255,255,.55); max-width: 280px; line-height: 1.65; text-align: right; }
+.steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+.step {
+  padding: 36px 28px 40px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  position: relative;
+}
+.step:last-child { border-right: none; }
+.step-bg-num {
+  font-family: var(--head); font-size: 120px; font-weight: 700;
+  color: rgba(255,255,255,.06); line-height: 1; letter-spacing: -.04em;
+  position: absolute; top: 16px; right: 16px;
+  pointer-events: none;
+}
+.step-num {
+  font-family: var(--head); font-size: 13px; font-weight: 700;
+  letter-spacing: .1em; color: var(--pink);
+  text-transform: uppercase; margin-bottom: 20px; display: block;
+}
+.step h3 { font-size: 20px; color: #fff; margin-bottom: 12px; letter-spacing: -.015em; }
+.step .body-txt { font-size: 13.5px; color: rgba(255,255,255,.55); }
+
+/* =============================================
+   PRICING — Register 3 white
+============================================= */
+.pricing { background: var(--white); }
+.pricing-hdr { margin-bottom: 52px; }
+.pricing-hdr h2 { margin-bottom: 12px; }
+.pricing-hdr .lead { max-width: 560px; }
+
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
+
+.price-card {
+  border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--cream-dark);
+  display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.price-card:hover { box-shadow: 0 14px 44px rgba(3,152,158,.1); transform: translateY(-4px); }
+.price-card.featured { border-color: var(--teal); border-width: 2px; }
+
+.pc-head {
+  padding: 28px 28px 24px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--cream-dark);
+  position: relative;
+}
+.price-card.featured .pc-head { background: var(--teal); border-bottom-color: transparent; }
+.pc-badge {
+  position: absolute; top: 20px; right: 20px;
+  background: var(--pink); color: #fff;
+  font-family: var(--body); font-size: 9px; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px;
+}
+.pc-name {
+  font-family: var(--head); font-size: 11px; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 6px; display: block;
+}
+.price-card.featured .pc-name { color: rgba(255,255,255,.7); }
+.pc-coach {
+  font-family: var(--head); font-size: 26px; font-weight: 700;
+  letter-spacing: -.02em; color: var(--text-dark); margin-bottom: 4px; display: block;
+}
+.price-card.featured .pc-coach { color: #fff; }
+.pc-role {
+  font-family: var(--body); font-size: 12px; font-weight: 300;
+  color: var(--text); display: block;
+}
+.price-card.featured .pc-role { color: rgba(255,255,255,.65); }
+
+.pc-body { padding: 28px; flex: 1; display: flex; flex-direction: column; background: var(--white); }
+.price-card.featured .pc-body { background: var(--white); }
+
+.price-main {
+  display: flex; align-items: baseline; gap: 4px;
+  margin-bottom: 6px;
+}
+.price-main .currency { font-family: var(--body); font-size: 18px; font-weight: 600; color: var(--teal); }
+.price-main .amount { font-family: var(--head); font-size: 52px; font-weight: 700; letter-spacing: -.04em; color: var(--teal-dark); line-height: 1; }
+.price-note { font-family: var(--body); font-size: 12px; font-weight: 300; color: var(--text); margin-bottom: 24px; line-height: 1.45; }
+
+.pc-feats { display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; flex: 1; }
+.pc-feat { display: flex; align-items: flex-start; gap: 10px; font-family: var(--body); font-size: 13px; color: var(--text); font-weight: 300; }
+.pc-feat svg { width: 14px; height: 14px; stroke: var(--teal); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 2px; }
+
+.pc-extras { border-top: 1px solid var(--cream-dark); padding-top: 20px; margin-bottom: 24px; }
+.pc-extras-label { font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--text); margin-bottom: 12px; display: block; }
+.pc-extra-item { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--cream-dark); }
+.pc-extra-item:last-child { border-bottom: none; }
+.pc-extra-item span:first-child { font-family: var(--body); font-size: 12.5px; color: var(--text); font-weight: 300; }
+.pc-extra-item span:last-child { font-family: var(--head); font-size: 14px; font-weight: 700; color: var(--teal-dark); letter-spacing: -.01em; }
+
+/* payment note */
+.payment-note {
+  background: var(--teal-pale); border: 1px solid var(--teal-mid);
+  border-radius: var(--r); padding: 20px 24px;
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.payment-note svg { width: 18px; height: 18px; stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 1px; }
+.payment-note p { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--text-dark); line-height: 1.6; }
+.payment-note p strong { font-weight: 600; color: var(--teal-dark); }
+
+/* =============================================
+   PILLARS — Register 2 cream
+============================================= */
+.pillars {
+  background: var(--cream);
+  border-top: 4px solid var(--teal);
+  position: relative; overflow: hidden;
+}
+.pillars-top {
+  padding: 64px 48px 48px;
+  max-width: var(--max); margin: 0 auto;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+}
+.pillars-heading {
+  font-family: var(--head); font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700; line-height: 1.04; letter-spacing: -.02em; color: var(--teal);
+}
+.pillars-heading .pk { color: var(--pink); }
+.pillars-sub {
+  font-family: var(--body); font-size: 14px; font-weight: 300;
+  color: var(--text); line-height: 1.65; max-width: 300px; flex-shrink: 0;
+}
+.pillars-row {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  padding: 0 48px 64px;
+  max-width: var(--max); margin: 0 auto; gap: 16px;
+}
+.pill-card {
+  background: var(--white);
+  border-radius: 8px; overflow: hidden;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--cream-dark);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.pill-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,.1); border-color: transparent; }
+.pill-band {
+  height: 88px; position: relative; overflow: hidden; flex-shrink: 0;
+}
+.pill-card:nth-child(1) .pill-band { background: var(--teal); }
+.pill-card:nth-child(2) .pill-band { background: var(--pink); }
+.pill-card:nth-child(3) .pill-band { background: var(--teal-dark); }
+.pill-card:nth-child(4) .pill-band { background: var(--pink); }
+.pill-card:nth-child(5) .pill-band { background: var(--teal); }
+.pill-band-num {
+  font-family: var(--head); font-weight: 700; font-size: 96px; line-height: 1; letter-spacing: -.06em;
+  color: rgba(255,255,255,.15); position: absolute; right: 8px; bottom: -10px;
+  pointer-events: none; user-select: none;
+}
+.pill-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; object-fit: contain; filter: invert(1) brightness(2); opacity: .92; }
+.pill-body { padding: 22px 20px 26px; flex: 1; display: flex; flex-direction: column; }
+.pill-num { font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--text); display: block; margin-bottom: 8px; }
+.pill-name { font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.01em; color: var(--teal); display: block; margin-bottom: 10px; }
+.pill-card:nth-child(2) .pill-name, .pill-card:nth-child(4) .pill-name { color: var(--pink); }
+.pill-desc { font-family: var(--body); font-size: 12.5px; font-weight: 300; color: var(--text); line-height: 1.6; flex: 1; }
+
+/* =============================================
+   TESTIMONIALS — Register 2 deep teal
+============================================= */
+.testis { background: var(--teal-deep); position: relative; overflow: hidden; }
+.testis::before {
+  content: '\201C'; font-family: var(--head); font-size: 340px; font-weight: 700;
+  color: rgba(255,255,255,.04); position: absolute; top: -60px; left: 20px;
+  line-height: 1; pointer-events: none;
+}
+.testis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; position: relative; z-index: 1; }
+.testis-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgba(255,255,255,.08); pointer-events: none; }
+.testi-block { padding: 56px 52px; }
+.testi-block:first-child { border-right: 1px solid rgba(255,255,255,.08); }
+.stars { display: flex; gap: 4px; margin-bottom: 22px; }
+.stars svg { width: 16px; height: 16px; fill: var(--pink); }
+.testi-q { font-family: var(--body); font-size: clamp(15px, 2vw, 19px); font-weight: 300; font-style: italic; line-height: 1.68; color: rgba(255,255,255,.88); margin-bottom: 24px; }
+.testi-a strong { display: block; font-family: var(--head); font-size: 15px; font-weight: 700; letter-spacing: -.01em; color: #fff; margin-bottom: 2px; }
+.testi-a span { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.35); }
+
+/* =============================================
+   FAQ — Register 3 cream
+============================================= */
+.faq { background: var(--cream); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.faq-intro h2 { margin-bottom: 18px; }
+.faq-intro .lead { margin-bottom: 28px; }
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--cream-dark); }
+.faq-item:first-child { border-top: 1px solid var(--cream-dark); }
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px; padding: 22px 0; cursor: pointer;
+}
+.faq-q span {
+  font-family: var(--head); font-size: 16px; font-weight: 700;
+  letter-spacing: -.01em; color: var(--text-dark); line-height: 1.3;
+}
+.faq-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--teal-pale); border: 1.5px solid var(--teal-mid);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: background .2s, transform .2s;
+}
+.faq-icon svg { width: 12px; height: 12px; stroke: var(--teal); fill: none; stroke-width: 2.5; stroke-linecap: round; transition: transform .25s; }
+.faq-item.open .faq-icon { background: var(--teal); }
+.faq-item.open .faq-icon svg { stroke: #fff; transform: rotate(45deg); }
+.faq-a {
+  font-family: var(--body); font-size: 14px; font-weight: 300;
+  color: var(--text); line-height: 1.72;
+  max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s ease;
+}
+.faq-item.open .faq-a { max-height: 400px; padding-bottom: 22px; }
+
+/* =============================================
+   CTA — Register 5
+============================================= */
+.cta { background: var(--teal); }
+.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+.cta-inner h2 { color: #fff; }
+.cta-inner h2 .pk { color: var(--pink); }
+.cta-inner .body-txt { color: rgba(255,255,255,.65); margin-top: 10px; }
+.cta-btns { display: flex; flex-direction: column; gap: 11px; align-items: flex-end; white-space: nowrap; }
+
+/* FOOTER */
+.footer { background: var(--teal-deep); padding: 72px 0 40px; }
+.fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.fw { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.fs { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 4px 0 16px; }
+.fd { font-family: var(--body); font-size: 13px; color: rgba(255,255,255,.38); font-weight: 300; line-height: 1.72; max-width: 248px; margin-bottom: 20px; }
+.socials { display: flex; gap: 8px; }
+.soc { width: 33px; height: 33px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.36); transition: all .2s; }
+.soc svg { width: 13px; height: 13px; fill: currentColor; }
+.soc:hover { border-color: var(--teal); color: var(--teal); background: rgba(3,152,158,.12); }
+.fcol-t { font-family: var(--body); font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 16px; }
+.flinks { display: flex; flex-direction: column; gap: 9px; }
+.flinks a { font-family: var(--body); font-size: 13.5px; color: rgba(255,255,255,.48); font-weight: 300; transition: color .2s; }
+.flinks a:hover { color: rgba(255,255,255,.9); }
+.fbot { border-top: 1px solid rgba(255,255,255,.07); padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.fcopy { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; }
+.fleg { display: flex; gap: 20px; }
+.fleg a { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; transition: color .2s; }
+.fleg a:hover { color: rgba(255,255,255,.5); }
+
+@keyframes fu { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .pricing-grid { grid-template-columns: 1fr 1fr; }
+  .pillars-row { grid-template-columns: repeat(3,1fr); }
+  .steps { grid-template-columns: repeat(2,1fr); }
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .inc-grid, .faq-grid { grid-template-columns: 1fr; gap: 44px; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .testis-grid { grid-template-columns: 1fr; }
+  .testi-block:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .cta-inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-btns { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .hero-panel { display: none; }
+  .pillars-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .pillars-sub { max-width: 100%; }
+  .how-top { flex-direction: column; align-items: flex-start; }
+  .how-top p { text-align: left; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 24px; }
+  .sec { padding: 68px 0; }
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+  .pillars-row { grid-template-columns: repeat(2,1fr); padding: 0 24px 48px; }
+  .pillars-top { padding: 48px 24px 32px; }
+  .steps { grid-template-columns: 1fr; }
+  .fg { grid-template-columns: 1fr; }
+  .fbot { flex-direction: column; text-align: center; }
+  .fleg { flex-wrap: wrap; justify-content: center; }
+  .proof-inner { gap: 20px; }
+  .proof-div { display: none; }
+  .testi-block { padding: 40px 24px; }
+}
+@media (max-width: 420px) {
+  .pillars-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="logo-mark.png" alt="Nutricore Health logomark"
+           style="width:38px;height:38px;object-fit:contain;flex-shrink:0;
+                  filter:invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);">
+      <div class="logo-words">
+        <strong>Nutricore Health</strong>
+        <span>Women's Coaching</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/coaching.html" class="active">Coaching</a>
+      <a href="/corporate.html">Corporate</a>
+      <a href="/#how">How It Works</a>
+      <a href="/about.html">About</a>
+      <a href="/resources.html">Resources</a>
+    </div>
+    <a href="#book" class="nav-cta">Book a Call</a>
+    <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="/coaching.html" onclick="closeM()">Coaching</a>
+  <a href="/corporate.html" onclick="closeM()">Corporate</a>
+  <a href="/#how"          onclick="closeM()">How It Works</a>
+  <a href="/about.html"    onclick="closeM()">About</a>
+  <a href="/resources.html" onclick="closeM()">Resources</a>
+  <a href="/contact.html"  onclick="closeM()">Contact</a>
+  <a href="#book" class="btn btn-teal" onclick="closeM()">Book a Free Call</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <div class="hero-panel">
+    <img src="photo-coaching.jpg" alt="1:1 health coaching session with Nutricore Health">
+  </div>
+  <div class="hero-dots"></div>
+  <div class="hero-bar"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-text">1:1 Health Coaching · 12 Weeks</span>
+    </div>
+    <h1>A plan built<br>around <span class="pk">your</span><br>real life.</h1>
+    <p class="hero-sub">12 weeks. Five pillars. One coach dedicated to you. No guesswork, no generic programmes.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn btn-white">Book a Free Call</a>
+      <a href="#pricing" class="btn btn-outw">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- proof strip -->
+<div class="proof-strip">
+  <div class="proof-inner">
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>Free 20-minute discovery call</span>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>Registered naturopathic health coaches</span>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>Flexible payment options available</span>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>Clinical oversight on every programme</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ WHAT'S INCLUDED ══ -->
+<section class="sec included">
+  <div class="wrap">
+    <div class="inc-grid">
+      <div class="inc-photo rv">
+        <img src="photo-marie-session.jpg" alt="Marie Frost in a Nutricore Health coaching session">
+      </div>
+      <div class="rv d2">
+        <span class="eyebrow">The 12-Week Programme</span>
+        <h2>Everything you<br>need. <span class="tc">Nothing you don't.</span></h2>
+        <p class="lead">One structured programme that looks at the full picture. Not a topic-by-topic course — a plan that follows you.</p>
+        <div class="inc-items">
+          <div class="inc-item">
+            <span class="inc-num">01</span>
+            <div class="inc-detail">
+              <strong>Full health intake</strong>
+              <span>A detailed questionnaire and a 4-day food diary, completed before session one. Your coach reviews everything ahead of the call so the first session gets straight into what matters.</span>
+            </div>
+          </div>
+          <div class="inc-item">
+            <span class="inc-num">02</span>
+            <div class="inc-detail">
+              <strong>Fortnightly 1:1 sessions</strong>
+              <span>Thirty minutes, every two weeks. Online. Focused on your priorities, not a fixed script.</span>
+            </div>
+          </div>
+          <div class="inc-item">
+            <span class="inc-num">03</span>
+            <div class="inc-detail">
+              <strong>Weekly check-ins</strong>
+              <span>A short prompt each week to track energy, sleep, and resilience. Keeps you accountable without adding to your to-do list.</span>
+            </div>
+          </div>
+          <div class="inc-item">
+            <span class="inc-num">04</span>
+            <div class="inc-detail">
+              <strong>Recipes, resources &amp; guides</strong>
+              <span>Practical support materials alongside your plan. Evidence-based, not trend-led.</span>
+            </div>
+          </div>
+          <div class="inc-item">
+            <span class="inc-num">05</span>
+            <div class="inc-detail">
+              <strong>Final 30-minute review</strong>
+              <span>A proper close. Progress reflected on, outcomes assessed, and next steps decided together — including the option of a personalised extended support plan to maintain and build on what you've achieved.</span>
+            </div>
+          </div>
+        </div>
+        <a href="#book" class="btn btn-teal">Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="sec how" id="how">
+  <div class="wrap how-inner">
+    <div class="how-top rv">
+      <h2>From first call<br>to real results.</h2>
+      <p>A straightforward process. No commitment until you're ready.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv d1">
+        <span class="step-bg-num">01</span>
+        <span class="step-num">Step 01</span>
+        <h3>Discovery Call</h3>
+        <p class="body-txt">20 minutes. We walk you through the process, you ask questions, and we both work out whether this is the right fit. No pressure in either direction.</p>
+      </div>
+      <div class="step rv d2">
+        <span class="step-bg-num">02</span>
+        <span class="step-num">Step 02</span>
+        <h3>Health Intake</h3>
+        <p class="body-txt">A detailed health questionnaire plus a 4-day food diary, completed before session one. Your coach reviews everything ahead of the call — so the first session gets straight to the point.</p>
+      </div>
+      <div class="step rv d3">
+        <span class="step-bg-num">03</span>
+        <span class="step-num">Step 03</span>
+        <h3>Session One</h3>
+        <p class="body-txt">An in-depth 1:1 to understand your baseline, your priorities, and what's actually going on. Your personalised action plan follows.</p>
+      </div>
+      <div class="step rv d4">
+        <span class="step-bg-num">04</span>
+        <span class="step-num">Step 04</span>
+        <h3>Your Programme</h3>
+        <p class="body-txt">Fortnightly 1:1 sessions, weekly check-ins, and a 30-minute final review. Twelve weeks of support with someone who actually knows your situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section class="sec pricing" id="pricing">
+  <div class="wrap">
+    <div class="pricing-hdr rv">
+      <span class="eyebrow">Transparent Pricing</span>
+      <h2>Choose your <span class="tc">coach.</span></h2>
+      <p class="lead">Both Marie and Helen are registered naturopathic health coaches, qualified through the College of Naturopathic Medicine. Every programme has clinical oversight from Marie regardless of who delivers it.</p>
+    </div>
+    <div class="pricing-grid rv d1">
+
+      <!-- Helen -->
+      <div class="price-card">
+        <div class="pc-head">
+          <span class="pc-name">Associate Coach</span>
+          <span class="pc-coach">Helen Lancaster</span>
+          <span class="pc-role">Naturopathic Health Coach · CNM qualified</span>
+        </div>
+        <div class="pc-body">
+          <div class="price-main">
+            <span class="currency">£</span>
+            <span class="amount">585</span>
+          </div>
+          <p class="price-note">12-week programme · Payment plans available</p>
+          <ul class="pc-feats">
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Full health intake &amp; baseline review
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              6 x fortnightly 30-minute 1:1 sessions
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Weekly check-in prompts &amp; accountability
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Recipes, resources &amp; guides
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              30-minute final review &amp; personalised next steps
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Clinical oversight from Marie throughout
+            </li>
+          </ul>
+          <a href="#book" class="btn btn-out" style="width:100%;text-align:center;">Book with Helen</a>
+        </div>
+      </div>
+
+      <!-- Marie -->
+      <div class="price-card featured">
+        <div class="pc-head">
+          <span class="pc-badge">Founder</span>
+          <span class="pc-name">Clinical Lead</span>
+          <span class="pc-coach">Marie Frost</span>
+          <span class="pc-role">Naturopathic Health Coach &amp; Nutritional Therapist</span>
+        </div>
+        <div class="pc-body">
+          <div class="price-main">
+            <span class="currency">£</span>
+            <span class="amount">785</span>
+          </div>
+          <p class="price-note">12-week programme · Payment plans available</p>
+          <ul class="pc-feats">
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Full health intake &amp; baseline review
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              6 x fortnightly 30-minute 1:1 sessions
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Weekly check-in prompts &amp; accountability
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Recipes, resources &amp; guides
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              30-minute final review &amp; personalised next steps
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Supplement review &amp; discounted dispensary access
+            </li>
+          </ul>
+          <a href="#book" class="btn btn-teal" style="width:100%;text-align:center;">Book with Marie</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="payment-note rv d2">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p><strong>Payment plans available.</strong> Both programmes can be spread across multiple payments. Options are shown at the time of booking. Not sure which coach is right for you? Book a free discovery call and we'll help you decide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PILLARS ══ -->
+<section class="pillars">
+  <div class="pillars-top rv">
+    <h2 class="pillars-heading">Five pillars.<br><span class="pk">One programme.</span></h2>
+    <p class="pillars-sub">Your plan works across all five areas — because in women's health, everything connects to everything else.</p>
+  </div>
+  <div class="pillars-row">
+    <div class="pill-card rv d1">
+      <div class="pill-band">
+        <img src="icon-sleep.png" alt="Sleep" class="pill-icon">
+        <span class="pill-band-num">01</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">01</span>
+        <span class="pill-name">Sleep</span>
+        <p class="pill-desc">Wake up actually rested. We find what's disrupting your sleep and build a plan around it.</p>
+      </div>
+    </div>
+    <div class="pill-card rv d2">
+      <div class="pill-band">
+        <img src="icon-resilience.png" alt="Resilience" class="pill-icon">
+        <span class="pill-band-num">02</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">02</span>
+        <span class="pill-name">Resilience</span>
+        <p class="pill-desc">Build your capacity to handle pressure, recover faster, and stop running on empty.</p>
+      </div>
+    </div>
+    <div class="pill-card rv d3">
+      <div class="pill-band">
+        <img src="icon-nutrition.png" alt="Nutrition" class="pill-icon">
+        <span class="pill-band-num">03</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">03</span>
+        <span class="pill-name">Nutrition</span>
+        <p class="pill-desc">Food that works for you, your hormones, your gut, and your actual life.</p>
+      </div>
+    </div>
+    <div class="pill-card rv d4">
+      <div class="pill-band">
+        <img src="icon-movement.png" alt="Movement" class="pill-icon">
+        <span class="pill-band-num">04</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">04</span>
+        <span class="pill-name">Movement</span>
+        <p class="pill-desc">Energy, strength, a body that feels good to live in. The right approach for right now.</p>
+      </div>
+    </div>
+    <div class="pill-card rv d4">
+      <div class="pill-band">
+        <img src="icon-joy.png" alt="Joy" class="pill-icon">
+        <span class="pill-band-num">05</span>
+      </div>
+      <div class="pill-body">
+        <span class="pill-num">05</span>
+        <span class="pill-name">Joy</span>
+        <p class="pill-desc">The most overlooked pillar. What lights you up belongs in your health plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="sec testis">
+  <div class="wrap">
+    <div class="testis-grid">
+      <div class="testi-block rv">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-q">"Finally able to understand nutrition in a different light — and for the first time in years, I actually have a plan I can stick to."</p>
+        <div class="testi-a">
+          <strong>Danielle</strong>
+          <span>Nutricore Health Client</span>
+        </div>
+      </div>
+      <div class="testi-block rv d2">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-q">"Marie's wealth of knowledge, humour, and professional approach are everything you need when you're trying to get your head around the next chapter of midlife. A gold mine."</p>
+        <div class="testi-a">
+          <strong>Kika</strong>
+          <span>Nutricore Health Client</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="faq-intro rv">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Things people<br>usually <span class="tc">ask first.</span></h2>
+        <p class="lead">Straight answers. If something isn't covered here, book a discovery call — that's what they're for.</p>
+        <a href="#book" class="btn btn-out" style="margin-top: 8px;">Book a Free Call</a>
+      </div>
+      <div class="faq-list rv d2">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Do I have to be going through perimenopause?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Not at all. Nutricore Health works with women 35 and above — whether perimenopause is relevant to you or not. The five-pillar approach applies to anyone who wants to feel better, has more energy, sleeps properly, and has a plan that fits real life. Perimenopause is one context, not a requirement.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>What's the difference between Marie and Helen?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Both are registered naturopathic health coaches, qualified through the College of Naturopathic Medicine. Marie is also a nutritional therapist and has a clinical background that allows for supplement review — which is available as an add-on when working with her directly. All associate programmes, including Helen's, receive clinical oversight from Marie throughout. Not sure which is right for you? That's exactly what the discovery call is for.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>I've tried things like this before and they haven't worked. Why would this be different?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Fair question. The honest answer is that most programmes fail because they're built around what worked for someone else, not you. The Nutricore approach starts with your health intake — a proper look at your history, your habits, and your life — before any recommendations are made. There's no fixed script. Your coach follows your priorities, not a syllabus. If you've done generic before and it didn't stick, that's a reasonable reason to try something built around you.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>How much time will this take each week?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">One 30-minute call every two weeks, plus a short weekly check-in that takes a few minutes to complete. The work itself — the habit changes, the small shifts — is built around your actual schedule. This is not a programme that adds to your to-do list. It's designed to work with the life you already have.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Will I be told what to eat or given a meal plan?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">No rigid meal plans. Nutricore Health is food-first, not restrictive. You'll get practical, evidence-informed nutrition guidance — recipe suggestions, food strategies, and support around the way you actually eat. Nothing is off the table. The goal is a relationship with food that works for your hormones, your gut, and your life. Not a diet with an end date.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Are supplements part of the programme?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Food comes first — always. That said, Marie reviews your supplement status and current stack as part of every coaching programme, whichever coach you work with. If there are gaps or anything that isn't serving you, that gets addressed. Where supplements are appropriate, clients have access to a discounted dispensary for high-quality products at better-than-retail prices. Nothing is pushed. Everything is considered in the context of your full picture.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>What happens after the 12 weeks?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">The final session is a proper review — outcomes assessed, progress acknowledged, next steps discussed. Some clients are ready to continue independently. Others choose to continue with ad hoc check-ins or a lighter continuation package. There's no pressure either way. The goal is that by week 12, you have the knowledge and habits to keep going on your own — with the option of support whenever you want it.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="sec-sm cta" id="book">
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <div>
+        <h2>Start with a<br>free <span class="pk">discovery</span> call.</h2>
+        <p class="body-txt">20 minutes. No obligation. We'll work out whether this is the right fit — and if it is, what happens next.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-white">Book Free Call</a>
+        <a href="/contact.html" class="btn btn-outw">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fw">Nutricore Health</div>
+        <span class="fs">Women's Coaching · UK</span>
+        <p class="fd">Practical, evidence-informed health coaching for women 35+. No fads. Just real support.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="soc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a><a href="/contact.html">Contact</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="/coaching.html">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+
+  const mob = document.getElementById('mob');
+  function openM()  { mob.style.display = 'flex'; requestAnimationFrame(() => mob.classList.add('open')); document.body.style.overflow = 'hidden'; }
+  function closeM() { mob.classList.remove('open'); setTimeout(() => mob.style.display = 'none', 300); document.body.style.overflow = ''; }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
