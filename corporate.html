@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Wellbeing | Nutricore Health</title>
+<meta name="description" content="Evidence-led women's health coaching for the workplace. Delivered at your site. Built around your workforce. Enquire for a bespoke programme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   NUTRICORE HEALTH — BRAND SYSTEM v5
+   corporate.html
+============================================ */
+:root {
+  --teal:       #03989e;
+  --teal-dark:  #027a80;
+  --teal-deep:  #0d3d40;
+  --teal-pale:  #eaf5f6;
+  --teal-mid:   #b2dfe2;
+  --pink:       #ff66c4;
+  --pink-pale:  #fff0f9;
+  --cream:      #f5f0eb;
+  --cream-dark: #e8e0d6;
+  --white:      #ffffff;
+  --text:       #5c5c5c;
+  --text-dark:  #3a3a3a;
+  --head:       'DM Sans', sans-serif;
+  --body:       'Poppins', sans-serif;
+  --max:        1140px;
+  --r:          5px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.wrap   { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.sec    { padding: 100px 0; }
+.sec-sm { padding: 68px 0; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--body);
+  font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 16px;
+}
+.eyebrow-white {
+  display: inline-block; font-family: var(--body);
+  font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: rgba(255,255,255,.55); margin-bottom: 16px;
+}
+h2 {
+  font-family: var(--head); font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 700; line-height: 1.06; letter-spacing: -.018em; color: var(--teal);
+}
+h3 {
+  font-family: var(--head); font-size: clamp(18px, 2vw, 23px);
+  font-weight: 700; line-height: 1.15; letter-spacing: -.015em; color: var(--teal);
+}
+.lead     { font-size: 17px; font-weight: 300; line-height: 1.78; color: var(--text); }
+.body-txt { font-size: 15px; font-weight: 300; line-height: 1.72; color: var(--text); }
+.tc { color: var(--teal); } .pk { color: var(--pink); }
+
+.btn {
+  display: inline-block; font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .13em; text-transform: uppercase; padding: 15px 32px;
+  border-radius: var(--r); border: 2px solid transparent; transition: all .22s ease;
+}
+.btn-teal  { background: var(--teal);  color: #fff; border-color: var(--teal); }
+.btn-teal:hover  { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(3,152,158,.22); }
+.btn-out   { background: transparent; color: var(--teal); border-color: var(--teal); }
+.btn-out:hover   { background: var(--teal); color: #fff; transform: translateY(-1px); }
+.btn-white { background: var(--white); color: var(--teal-dark); border-color: var(--white); }
+.btn-white:hover { background: transparent; color: var(--white); transform: translateY(-1px); }
+.btn-outw  { background: transparent; color: rgba(255,255,255,.88); border-color: rgba(255,255,255,.4); }
+.btn-outw:hover  { background: rgba(255,255,255,.1); transform: translateY(-1px); }
+
+.rv { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+.rv.in { opacity: 1; transform: none; }
+.d1{transition-delay:.07s} .d2{transition-delay:.14s} .d3{transition-delay:.21s} .d4{transition-delay:.28s}
+
+/* =============================================
+   NAV
+============================================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(245,240,235,.97); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cream-dark); transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(13,61,64,.07); }
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between; height: 70px;
+}
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-words strong { display: block; font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); }
+.logo-words span   { display: block; font-family: var(--body); font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--text); margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; color: var(--text); transition: color .2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--teal); transform: scaleX(0); transition: transform .2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--teal); }
+.nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { font-family: var(--body); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 12px 22px; border-radius: var(--r); transition: all .2s; }
+.nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+.mob { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 199; padding: 40px; flex-direction: column; overflow-y: auto; transform: translateX(100%); transition: transform .3s ease; }
+.mob.open { transform: none; }
+.mob a { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); padding: 16px 0; border-bottom: 1px solid var(--cream-dark); display: block; }
+.mob .btn { margin-top: 28px; display: block; text-align: center; }
+
+/* =============================================
+   HERO — Register 1
+============================================= */
+.hero {
+  min-height: 88vh; background: var(--teal);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-top: 70px; overflow: hidden; position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(140deg, var(--teal-dark) 0%, var(--teal) 55%, #04adb4 100%);
+  pointer-events: none;
+}
+.hero-panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 42%; z-index: 1;
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-dots {
+  position: absolute; top: 120px; left: 48px; z-index: 2;
+  width: 130px; height: 130px;
+  background-image: radial-gradient(circle, rgba(255,255,255,.16) 1.5px, transparent 1.5px);
+  background-size: 20px 20px; pointer-events: none;
+}
+.hero-bar { position: absolute; top: 0; left: 0; width: 4px; height: 200px; background: var(--pink); border-radius: 0 3px 3px 0; opacity: .7; z-index: 2; }
+.hero-content { position: relative; z-index: 3; padding: 60px 48px 90px; max-width: var(--max); margin: 0 auto; width: 100%; }
+.hero-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; animation: fu .8s ease both; }
+.hero-tag-line { width: 28px; height: 2px; background: var(--pink); border-radius: 2px; }
+.hero-tag-text { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.62); }
+.hero h1 {
+  font-family: var(--head); font-size: clamp(44px, 6.5vw, 86px);
+  font-weight: 700; line-height: .96; letter-spacing: -.025em;
+  color: #fff; max-width: 620px; margin-bottom: 24px; animation: fu .8s .1s ease both;
+}
+.hero h1 .pk { color: var(--pink); }
+.hero-sub { font-family: var(--body); font-size: 17px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,.72); max-width: 420px; margin-bottom: 44px; animation: fu .8s .2s ease both; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fu .8s .3s ease both; }
+
+/* client logo strip */
+.clients {
+  background: var(--teal-deep);
+  padding: 28px 0;
+}
+.clients-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.clients-label {
+  font-family: var(--body); font-size: 10px; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: rgba(255,255,255,.3); white-space: nowrap; flex-shrink: 0;
+  padding-right: 16px; border-right: 1px solid rgba(255,255,255,.1);
+}
+.clients-list {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap; flex: 1;
+}
+.client-pill {
+  font-family: var(--body); font-size: 11.5px; font-weight: 500;
+  color: rgba(255,255,255,.55); letter-spacing: .04em;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px; padding: 5px 14px; white-space: nowrap;
+  transition: color .2s, background .2s;
+}
+.client-pill:hover { color: rgba(255,255,255,.9); background: rgba(255,255,255,.12); }
+
+/* =============================================
+   BUSINESS CASE — Register 3 cream
+============================================= */
+.case { background: var(--cream); }
+.case-intro { max-width: 680px; margin-bottom: 64px; }
+.case-intro h2 { margin-bottom: 18px; }
+.case-intro .lead { margin-bottom: 0; }
+
+/* stat cards grid */
+.stat-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-bottom: 52px;
+}
+.stat-card {
+  background: var(--white); border-radius: 8px;
+  border: 1px solid var(--cream-dark);
+  padding: 32px 28px 28px;
+  display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.stat-card:hover { box-shadow: 0 12px 40px rgba(3,152,158,.09); transform: translateY(-3px); }
+.stat-num {
+  font-family: var(--head); font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700; letter-spacing: -.04em; color: var(--teal-dark);
+  line-height: 1; margin-bottom: 12px; display: block;
+}
+.stat-num .stat-unit { font-size: .55em; letter-spacing: -.01em; }
+.stat-desc {
+  font-family: var(--body); font-size: 14px; font-weight: 300;
+  color: var(--text); line-height: 1.6; flex: 1;
+  margin-bottom: 16px;
+}
+.stat-source {
+  font-family: var(--body); font-size: 10px; font-weight: 500;
+  letter-spacing: .06em; color: var(--teal-mid);
+  text-transform: uppercase; border-top: 1px solid var(--cream-dark);
+  padding-top: 12px; display: block;
+}
+
+/* second stat row — 2 wide cards */
+.stat-grid-2 {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin-bottom: 16px;
+}
+.stat-card.wide { flex-direction: row; align-items: flex-start; gap: 24px; }
+.stat-card.wide .stat-num { flex-shrink: 0; font-size: clamp(32px, 3.5vw, 46px); }
+.stat-card.wide .stat-right { flex: 1; display: flex; flex-direction: column; }
+.stat-card.wide .stat-desc { margin-bottom: 12px; }
+
+/* =============================================
+   PILLARS — BUSINESS FRAME — Register 4 teal
+============================================= */
+.pillars-biz {
+  background: var(--teal); position: relative; overflow: hidden;
+}
+.pillars-biz::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  pointer-events: none;
+}
+.pillars-biz-inner { position: relative; z-index: 1; }
+.pillars-biz-top { margin-bottom: 52px; display: flex; align-items: flex-end; gap: 40px; justify-content: space-between; }
+.pillars-biz-top h2 { color: #fff; flex-shrink: 0; max-width: 440px; }
+.pillars-biz-top p { font-family: var(--body); font-size: 15px; font-weight: 300; color: rgba(255,255,255,.55); max-width: 280px; line-height: 1.65; text-align: right; }
+
+.biz-pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+.biz-pillar {
+  padding: 32px 24px 36px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  position: relative;
+}
+.biz-pillar:last-child { border-right: none; }
+.biz-pillar-num {
+  font-family: var(--head); font-size: 11px; font-weight: 700;
+  letter-spacing: .14em; color: var(--pink);
+  text-transform: uppercase; margin-bottom: 16px; display: block;
+}
+.biz-pillar-name {
+  font-family: var(--head); font-size: 18px; font-weight: 700;
+  color: #fff; letter-spacing: -.015em; margin-bottom: 10px; display: block;
+}
+.biz-pillar-impact {
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  color: var(--pink); text-transform: uppercase; letter-spacing: .1em;
+  margin-bottom: 10px; display: block;
+}
+.biz-pillar p {
+  font-family: var(--body); font-size: 13px; font-weight: 300;
+  color: rgba(255,255,255,.55); line-height: 1.6;
+}
+
+/* =============================================
+   WHAT WE OFFER — Register 3 white
+============================================= */
+.offer { background: var(--white); }
+.offer-hdr { margin-bottom: 52px; }
+.offer-hdr h2 { margin-bottom: 12px; }
+.offer-hdr .lead { max-width: 560px; }
+
+.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.offer-card {
+  background: var(--cream); border-radius: 8px;
+  border: 1px solid var(--cream-dark);
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.offer-card:hover { box-shadow: 0 14px 44px rgba(3,152,158,.1); transform: translateY(-4px); }
+.offer-card-top {
+  height: 6px; width: 100%;
+}
+.offer-card-top.teal { background: var(--teal); }
+.offer-card-top.pink { background: var(--pink); }
+.offer-card-top.deep { background: var(--teal-deep); }
+.offer-body { padding: 30px 26px 32px; flex: 1; display: flex; flex-direction: column; }
+.offer-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--teal-pale); border: 1.5px solid var(--teal-mid);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; flex-shrink: 0;
+}
+.offer-icon svg { width: 20px; height: 20px; stroke: var(--teal); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.offer-card:nth-child(2) .offer-icon { background: var(--pink-pale); border-color: var(--pink); }
+.offer-card:nth-child(2) .offer-icon svg { stroke: var(--pink); }
+.offer-body h3 { margin-bottom: 10px; font-size: 19px; }
+.offer-body .body-txt { margin-bottom: 20px; flex: 1; font-size: 14px; }
+.offer-feats { display: flex; flex-direction: column; gap: 8px; }
+.offer-feat { display: flex; align-items: flex-start; gap: 9px; font-family: var(--body); font-size: 13px; color: var(--text); font-weight: 300; }
+.offer-feat::before { content: ''; width: 5px; height: 5px; background: var(--teal); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+.offer-card:nth-child(2) .offer-feat::before { background: var(--pink); }
+
+/* =============================================
+   WHO DELIVERS IT — Register 3 cream
+============================================= */
+.delivers { background: var(--cream); }
+.delivers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.delivers-photo { aspect-ratio: 4/5; min-height: 460px; overflow: hidden; border-radius: var(--r); }
+.delivers-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.delivers-text h2 { margin-bottom: 18px; }
+.delivers-text .lead { margin-bottom: 28px; }
+
+.creds { display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+.cred { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--cream-dark); }
+.cred:first-child { border-top: 1px solid var(--cream-dark); }
+.cred-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--teal); flex-shrink: 0; margin-top: 6px;
+}
+.cred span { font-family: var(--body); font-size: 14px; font-weight: 300; color: var(--text); line-height: 1.55; }
+.cred span strong { font-weight: 600; color: var(--text-dark); }
+
+/* =============================================
+   TESTIMONIAL — Register 2 deep teal
+============================================= */
+.testi { background: var(--teal-deep); position: relative; overflow: hidden; }
+.testi::before {
+  content: '\201C'; font-family: var(--head); font-size: 340px; font-weight: 700;
+  color: rgba(255,255,255,.04); position: absolute; top: -60px; left: 20px;
+  line-height: 1; pointer-events: none;
+}
+.testi-inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+.stars { display: flex; gap: 4px; margin-bottom: 22px; justify-content: center; }
+.stars svg { width: 16px; height: 16px; fill: var(--pink); }
+.testi-q { font-family: var(--body); font-size: clamp(17px, 2.4vw, 22px); font-weight: 300; font-style: italic; line-height: 1.68; color: rgba(255,255,255,.88); margin-bottom: 28px; }
+.testi-a strong { display: block; font-family: var(--head); font-size: 16px; font-weight: 700; letter-spacing: -.01em; color: #fff; margin-bottom: 3px; }
+.testi-a span { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.35); }
+
+/* placeholder state */
+.testi-placeholder {
+  border: 1px dashed rgba(255,255,255,.15);
+  border-radius: 8px; padding: 40px 48px;
+  text-align: center;
+}
+.testi-placeholder p {
+  font-family: var(--body); font-size: 14px; font-weight: 300;
+  color: rgba(255,255,255,.3); font-style: italic; line-height: 1.7;
+}
+.testi-placeholder .testi-ph-label {
+  font-family: var(--body); font-size: 10px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.18); display: block; margin-bottom: 16px;
+}
+
+/* =============================================
+   CTA — Register 5
+============================================= */
+.cta { background: var(--teal); }
+.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+.cta-inner h2 { color: #fff; }
+.cta-inner h2 .pk { color: var(--pink); }
+.cta-inner .body-txt { color: rgba(255,255,255,.65); margin-top: 10px; }
+.cta-btns { display: flex; flex-direction: column; gap: 11px; align-items: flex-end; white-space: nowrap; }
+
+/* FOOTER */
+.footer { background: var(--teal-deep); padding: 72px 0 40px; }
+.fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.fw { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.fs { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 4px 0 16px; }
+.fd { font-family: var(--body); font-size: 13px; color: rgba(255,255,255,.38); font-weight: 300; line-height: 1.72; max-width: 248px; margin-bottom: 20px; }
+.socials { display: flex; gap: 8px; }
+.soc { width: 33px; height: 33px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.36); transition: all .2s; }
+.soc svg { width: 13px; height: 13px; fill: currentColor; }
+.soc:hover { border-color: var(--teal); color: var(--teal); background: rgba(3,152,158,.12); }
+.fcol-t { font-family: var(--body); font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 16px; }
+.flinks { display: flex; flex-direction: column; gap: 9px; }
+.flinks a { font-family: var(--body); font-size: 13.5px; color: rgba(255,255,255,.48); font-weight: 300; transition: color .2s; }
+.flinks a:hover { color: rgba(255,255,255,.9); }
+.fbot { border-top: 1px solid rgba(255,255,255,.07); padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.fcopy { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; }
+.fleg { display: flex; gap: 20px; }
+.fleg a { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; transition: color .2s; }
+.fleg a:hover { color: rgba(255,255,255,.5); }
+
+@keyframes fu { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .stat-grid { grid-template-columns: repeat(3, 1fr); }
+  .biz-pillars { grid-template-columns: repeat(3, 1fr); }
+  .biz-pillar { border-bottom: 1px solid rgba(255,255,255,.1); }
+  .biz-pillar:nth-child(3) { border-right: none; }
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .delivers-grid { grid-template-columns: 1fr; gap: 44px; }
+  .offer-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .stat-grid-2 { grid-template-columns: 1fr; }
+  .cta-inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-btns { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .hero-panel { display: none; }
+  .pillars-biz-top { flex-direction: column; align-items: flex-start; }
+  .pillars-biz-top p { text-align: left; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 24px; }
+  .sec { padding: 68px 0; }
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .biz-pillars { grid-template-columns: 1fr 1fr; }
+  .biz-pillar:nth-child(3) { border-right: 1px solid rgba(255,255,255,.1); }
+  .biz-pillar:nth-child(2n) { border-right: none; }
+  .fg { grid-template-columns: 1fr; }
+  .fbot { flex-direction: column; text-align: center; }
+  .fleg { flex-wrap: wrap; justify-content: center; }
+  .clients-inner { gap: 12px; }
+  .testi-placeholder { padding: 28px 24px; }
+}
+@media (max-width: 420px) {
+  .biz-pillars { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="logo-mark.png" alt="Nutricore Health logomark"
+           style="width:38px;height:38px;object-fit:contain;flex-shrink:0;
+                  filter:invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);">
+      <div class="logo-words">
+        <strong>Nutricore Health</strong>
+        <span>Women's Coaching</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/coaching.html">Coaching</a>
+      <a href="/corporate.html" class="active">Corporate</a>
+      <a href="/#how">How It Works</a>
+      <a href="/about.html">About</a>
+      <a href="/resources.html">Resources</a>
+    </div>
+    <a href="#enquire" class="nav-cta">Make an Enquiry</a>
+    <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="/coaching.html"  onclick="closeM()">Coaching</a>
+  <a href="/corporate.html" onclick="closeM()">Corporate</a>
+  <a href="/#how"           onclick="closeM()">How It Works</a>
+  <a href="/about.html"     onclick="closeM()">About</a>
+  <a href="/resources.html" onclick="closeM()">Resources</a>
+  <a href="/contact.html"   onclick="closeM()">Contact</a>
+  <a href="#enquire" class="btn btn-teal" onclick="closeM()">Make an Enquiry</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <div class="hero-panel">
+    <img src="photo-corporate.jpg" alt="Marie Frost delivering a corporate wellbeing workshop">
+  </div>
+  <div class="hero-dots"></div>
+  <div class="hero-bar"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-text">Corporate Wellbeing · Women's Health</span>
+    </div>
+    <h1>Your female<br>workforce<br>deserves <span class="pk">better.</span></h1>
+    <p class="hero-sub">Specialist women's health coaching, delivered at your site. Practical, evidence-led, and built around the real pressures your people face.</p>
+    <div class="hero-btns">
+      <a href="#enquire" class="btn btn-white">Make an Enquiry</a>
+      <a href="#offer"   class="btn btn-outw">What We Offer</a>
+    </div>
+  </div>
+</section>
+
+<!-- client strip -->
+<div class="clients">
+  <div class="clients-inner">
+    <span class="clients-label">Worked with</span>
+    <div class="clients-list">
+      <span class="client-pill">Ford Motors</span>
+      <span class="client-pill">Essex County Council</span>
+      <span class="client-pill">Essex FA</span>
+      <span class="client-pill">Anglia Ruskin University</span>
+      <span class="client-pill">CityFibre</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BUSINESS CASE ══ -->
+<section class="sec case" id="case">
+  <div class="wrap">
+    <div class="case-intro rv">
+      <span class="eyebrow">The Business Case</span>
+      <h2>The data is clear.<br>Women's health <span class="tc">costs your business.</span></h2>
+      <p class="lead" style="margin-top:16px;">Untreated health challenges don't stay personal. They show up as absence, reduced output, and lost talent. The employers taking this seriously are seeing the returns.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card rv d1">
+        <span class="stat-num">9.4<span class="stat-unit"> days</span></span>
+        <p class="stat-desc">Average sickness absence per UK employee in 2025 — a record high, up from 7.8 days in 2023. Mental ill-health is now the leading cause of long-term absence.</p>
+        <span class="stat-source">CIPD Health &amp; Wellbeing at Work Report, 2025</span>
+      </div>
+      <div class="stat-card rv d2">
+        <span class="stat-num">25<span class="stat-unit">%</span></span>
+        <p class="stat-desc">Women are 25% more likely than men to report that their job negatively impacts their mental health. In 2024/25 there were 3,220 cases of work-related stress, depression or anxiety per 100,000 female workers.</p>
+        <span class="stat-source">Health &amp; Safety Executive Annual Statistics, Dec 2025</span>
+      </div>
+      <div class="stat-card rv d3">
+        <span class="stat-num">40<span class="stat-unit">%+</span></span>
+        <p class="stat-desc">Of women experiencing severe hormonal symptoms — menstruation, menopause, or fertility-related — report working through the pain without taking time off or receiving support.</p>
+        <span class="stat-source">Deloitte Women @ Work Global Outlook, 2024</span>
+      </div>
+    </div>
+
+    <div class="stat-grid-2">
+      <div class="stat-card wide rv d1">
+        <span class="stat-num">15.5<span class="stat-unit">%</span></span>
+        <div class="stat-right">
+          <p class="stat-desc">Of productive time lost by female employees to presenteeism — higher than male counterparts at 13.3%. Physical inactivity, chronic conditions, and mental health challenges all contribute.</p>
+          <span class="stat-source">RAND Europe / Britain's Healthiest Workplace Report</span>
+        </div>
+      </div>
+      <div class="stat-card wide rv d2">
+        <span class="stat-num">54<span class="stat-unit">%</span></span>
+        <div class="stat-right">
+          <p class="stat-desc">Of employers who invest in targeted wellbeing report improved overall health outcomes. 39% see increased employee engagement, and 38% see measurable gains in workplace performance.</p>
+          <span class="stat-source">CIPD Health &amp; Wellbeing at Work Report, 2025</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ PILLARS — BUSINESS FRAME ══ -->
+<section class="sec pillars-biz">
+  <div class="wrap pillars-biz-inner">
+    <div class="pillars-biz-top rv">
+      <h2>Five pillars.<br>One measurable impact<br>on your people.</h2>
+      <p>Each pillar maps directly to a business outcome. This isn't wellness for wellness' sake.</p>
+    </div>
+    <div class="biz-pillars">
+      <div class="biz-pillar rv d1">
+        <span class="biz-pillar-num">01</span>
+        <span class="biz-pillar-name">Sleep</span>
+        <span class="biz-pillar-impact">Cognitive performance</span>
+        <p>42% of UK employees report poor sleep quality. Sleep deprivation directly compromises decision-making, focus, and emotional regulation at work.</p>
+      </div>
+      <div class="biz-pillar rv d2">
+        <span class="biz-pillar-num">02</span>
+        <span class="biz-pillar-name">Resilience</span>
+        <span class="biz-pillar-impact">Reduced burnout &amp; absence</span>
+        <p>Women aged 35–44 carry disproportionate workplace stress. Building nervous system capacity reduces burnout risk and long-term sickness.</p>
+      </div>
+      <div class="biz-pillar rv d3">
+        <span class="biz-pillar-num">03</span>
+        <span class="biz-pillar-name">Nutrition</span>
+        <span class="biz-pillar-impact">Sustained energy &amp; focus</span>
+        <p>Food that supports hormones and gut health translates directly to consistent energy, better mood, and fewer sick days.</p>
+      </div>
+      <div class="biz-pillar rv d4">
+        <span class="biz-pillar-num">04</span>
+        <span class="biz-pillar-name">Movement</span>
+        <span class="biz-pillar-impact">Output &amp; physical health</span>
+        <p>Over 40% of women experiencing hormonal symptoms work through pain without support. The right movement strategy changes that.</p>
+      </div>
+      <div class="biz-pillar rv d4">
+        <span class="biz-pillar-num">05</span>
+        <span class="biz-pillar-name">Joy</span>
+        <span class="biz-pillar-impact">Retention &amp; engagement</span>
+        <p>Women who lose joy at work leave. Coaching that addresses quality of life and workplace satisfaction directly supports retention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT WE OFFER ══ -->
+<section class="sec offer" id="offer">
+  <div class="wrap">
+    <div class="offer-hdr rv">
+      <span class="eyebrow">How We Work With You</span>
+      <h2>Built around<br>your <span class="tc">organisation.</span></h2>
+      <p class="lead">Every corporate programme is scoped to your workforce, your structure, and your goals. Three core delivery models — used alone or in combination.</p>
+    </div>
+    <div class="offer-grid">
+
+      <div class="offer-card rv d1">
+        <div class="offer-card-top teal"></div>
+        <div class="offer-body">
+          <div class="offer-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>1:1 Coaching<br>at Your Site</h3>
+          <p class="body-txt">Individual health coaching sessions delivered in person at your workplace. Practical, confidential, and tailored to each employee.</p>
+          <ul class="offer-feats">
+            <li class="offer-feat">Delivered on-site at your location</li>
+            <li class="offer-feat">Can integrate into an employee benefit scheme</li>
+            <li class="offer-feat">Ad hoc sessions or structured ongoing support</li>
+            <li class="offer-feat">Full clinical oversight and quality assurance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="offer-card rv d2">
+        <div class="offer-card-top pink"></div>
+        <div class="offer-body">
+          <div class="offer-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Group Sessions &amp;<br>Lunch &amp; Learns</h3>
+          <p class="body-txt">Engaging group sessions that bring women's health into the open. Informative, practical, and designed to shift culture as well as individual behaviour.</p>
+          <ul class="offer-feats">
+            <li class="offer-feat">Topics across all five health pillars</li>
+            <li class="offer-feat">Interactive and discussion-led format</li>
+            <li class="offer-feat">Suitable for teams of any size</li>
+            <li class="offer-feat">Available in person or online</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="offer-card rv d3">
+        <div class="offer-card-top deep"></div>
+        <div class="offer-body">
+          <div class="offer-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Retained &amp; Ongoing<br>Support</h3>
+          <p class="body-txt">A longer-term partnership — Nutricore Health embedded as an ongoing resource within your organisation, with regular availability for your workforce.</p>
+          <ul class="offer-feats">
+            <li class="offer-feat">Monthly or quarterly retained arrangements</li>
+            <li class="offer-feat">Consistent coach relationships for employees</li>
+            <li class="offer-feat">Scalable as your organisation grows</li>
+            <li class="offer-feat">Bespoke reporting and outcome tracking</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO DELIVERS IT ══ -->
+<section class="sec delivers">
+  <div class="wrap">
+    <div class="delivers-grid">
+      <div class="delivers-photo rv">
+        <img src="photo-corporate.jpg" alt="Marie Frost presenting at a corporate wellbeing workshop">
+      </div>
+      <div class="rv d2">
+        <span class="eyebrow">Who Delivers It</span>
+        <h2>Someone who's<br>been in <span class="tc">your shoes.</span></h2>
+        <p class="lead">Marie Frost spent over 20 years in corporate life, including senior management roles, before retraining as a health practitioner. She experienced first-hand what sustained workplace pressure does to sleep, stress, movement, and health — and built Nutricore Health to do something about it.</p>
+        <p class="body-txt" style="margin-bottom:28px;">That background means she speaks the language of organisations, not just clinics. Corporate programmes are led by Marie directly, with associate coaches integrated as the model scales. Every programme carries full clinical oversight.</p>
+        <div class="creds">
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>Registered Naturopathic Health Coach</strong> — qualified through the College of Naturopathic Medicine (CNM)</span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>Nutritional Therapist</strong> — qualified through the College of Naturopathic Medicine (CNM)</span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>Diploma in Advanced Weight Management &amp; Nutrition</strong></span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>Lecturer at CNM</strong> — teaching nutrition, coaching practice, clinical assessment, and business to health coach students</span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>Head of Health Coach, ANP</strong> — Association of Naturopathic Practitioners, leading standards and development for health coach members</span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>ANP Business Club lead</strong> — running the business support and mentoring programme for ANP practitioner members</span>
+          </div>
+          <div class="cred">
+            <div class="cred-dot"></div>
+            <span><strong>20+ years in corporate</strong> — including senior management roles, with lived experience of what workplace demands do to women's health</span>
+          </div>
+        </div>
+        <a href="/about.html" class="btn btn-out">More About Marie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIAL ══ -->
+<section class="sec testi">
+  <div class="wrap">
+    <div class="testi-inner rv">
+      <div class="testi-placeholder">
+        <span class="testi-ph-label">Corporate testimonial</span>
+        <p>Client reviews coming soon. If you have worked with Nutricore Health in a corporate setting and would like to share your experience, we would love to hear from you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="sec-sm cta" id="enquire">
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <div>
+        <h2>Ready to invest in<br>your <span class="pk">female workforce?</span></h2>
+        <p class="body-txt">Every programme is scoped to your organisation. Get in touch and we'll talk through what makes sense for your team.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-white">Make an Enquiry</a>
+        <a href="/contact.html" class="btn btn-outw">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fw">Nutricore Health</div>
+        <span class="fs">Women's Coaching · UK</span>
+        <p class="fd">Practical, evidence-informed health coaching for women 35+. No fads. Just real support.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="soc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a><a href="/contact.html">Contact</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="/coaching.html">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+
+  const mob = document.getElementById('mob');
+  function openM()  { mob.style.display = 'flex'; requestAnimationFrame(() => mob.classList.add('open')); document.body.style.overflow = 'hidden'; }
+  function closeM() { mob.classList.remove('open'); setTimeout(() => mob.style.display = 'none', 300); document.body.style.overflow = ''; }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
