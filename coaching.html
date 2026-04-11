@@ -235,7 +235,7 @@ h3 {
 .pricing-hdr h2 { margin-bottom: 12px; }
 .pricing-hdr .lead { max-width: 560px; }
 
-.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px; }
 
 .price-card {
   border-radius: 8px; overflow: hidden;
@@ -246,39 +246,55 @@ h3 {
 .price-card:hover { box-shadow: 0 14px 44px rgba(3,152,158,.1); transform: translateY(-4px); }
 .price-card.featured { border-color: var(--teal); border-width: 2px; }
 
-.pc-head {
-  padding: 28px 28px 24px;
-  background: var(--cream);
-  border-bottom: 1px solid var(--cream-dark);
-  position: relative;
+/* coach photo header */
+.pc-photo {
+  width: 100%; aspect-ratio: 3/2; overflow: hidden; position: relative; flex-shrink: 0;
 }
-.price-card.featured .pc-head { background: var(--teal); border-bottom-color: transparent; }
+.pc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.pc-photo-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,61,64,.72) 0%, transparent 55%);
+}
+.pc-photo-text {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 22px 18px;
+}
+.pc-photo-text .pc-name {
+  font-family: var(--head); font-size: 11px; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.6); margin-bottom: 4px; display: block;
+}
+.pc-photo-text .pc-coach {
+  font-family: var(--head); font-size: 24px; font-weight: 700;
+  letter-spacing: -.02em; color: #fff; margin-bottom: 2px; display: block;
+}
+.pc-photo-text .pc-role {
+  font-family: var(--body); font-size: 11.5px; font-weight: 300;
+  color: rgba(255,255,255,.7); display: block;
+}
+
+/* badge — sits top-right on photo */
 .pc-badge {
-  position: absolute; top: 20px; right: 20px;
+  position: absolute; top: 14px; right: 14px;
   background: var(--pink); color: #fff;
   font-family: var(--body); font-size: 9px; font-weight: 600;
   letter-spacing: .16em; text-transform: uppercase;
-  padding: 4px 10px; border-radius: 20px;
+  padding: 4px 10px; border-radius: 20px; z-index: 2;
 }
-.pc-name {
-  font-family: var(--head); font-size: 11px; font-weight: 700;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 6px; display: block;
+.pc-badge.avail {
+  background: rgba(13,61,64,.75);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
 }
-.price-card.featured .pc-name { color: rgba(255,255,255,.7); }
-.pc-coach {
-  font-family: var(--head); font-size: 26px; font-weight: 700;
-  letter-spacing: -.02em; color: var(--text-dark); margin-bottom: 4px; display: block;
-}
-.price-card.featured .pc-coach { color: #fff; }
-.pc-role {
-  font-family: var(--body); font-size: 12px; font-weight: 300;
-  color: var(--text); display: block;
-}
-.price-card.featured .pc-role { color: rgba(255,255,255,.65); }
 
-.pc-body { padding: 28px; flex: 1; display: flex; flex-direction: column; background: var(--white); }
-.price-card.featured .pc-body { background: var(--white); }
+/* coach bio line */
+.pc-bio {
+  font-family: var(--body); font-size: 13px; font-weight: 300;
+  color: var(--text); line-height: 1.6;
+  padding: 16px 24px 0; border-top: 1px solid var(--cream-dark);
+  margin: 0 -28px; padding-left: 24px; padding-right: 24px;
+}
+
+.pc-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; background: var(--white); }
 
 .price-main {
   display: flex; align-items: baseline; gap: 4px;
@@ -292,22 +308,27 @@ h3 {
 .pc-feat { display: flex; align-items: flex-start; gap: 10px; font-family: var(--body); font-size: 13px; color: var(--text); font-weight: 300; }
 .pc-feat svg { width: 14px; height: 14px; stroke: var(--teal); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 2px; }
 
-.pc-extras { border-top: 1px solid var(--cream-dark); padding-top: 20px; margin-bottom: 24px; }
-.pc-extras-label { font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--text); margin-bottom: 12px; display: block; }
-.pc-extra-item { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--cream-dark); }
-.pc-extra-item:last-child { border-bottom: none; }
-.pc-extra-item span:first-child { font-family: var(--body); font-size: 12.5px; color: var(--text); font-weight: 300; }
-.pc-extra-item span:last-child { font-family: var(--head); font-size: 14px; font-weight: 700; color: var(--teal-dark); letter-spacing: -.01em; }
-
 /* payment note */
 .payment-note {
   background: var(--teal-pale); border: 1px solid var(--teal-mid);
   border-radius: var(--r); padding: 20px 24px;
   display: flex; align-items: flex-start; gap: 14px;
+  margin-bottom: 16px;
 }
 .payment-note svg { width: 18px; height: 18px; stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 1px; }
 .payment-note p { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--text-dark); line-height: 1.6; }
 .payment-note p strong { font-weight: 600; color: var(--teal-dark); }
+
+.pricing-team-link {
+  text-align: center; padding: 4px 0 8px;
+}
+.pricing-team-link a {
+  font-family: var(--body); font-size: 13px; font-weight: 500;
+  color: var(--teal); letter-spacing: .02em;
+  border-bottom: 1px solid var(--teal-mid); padding-bottom: 1px;
+  transition: color .2s, border-color .2s;
+}
+.pricing-team-link a:hover { color: var(--teal-dark); border-color: var(--teal-dark); }
 
 /* =============================================
    PILLARS — Register 2 cream
@@ -673,12 +694,17 @@ h3 {
 
       <!-- Helen -->
       <div class="price-card">
-        <div class="pc-head">
-          <span class="pc-name">Associate Coach</span>
-          <span class="pc-coach">Helen Lancaster</span>
-          <span class="pc-role">Naturopathic Health Coach · CNM qualified</span>
+        <div class="pc-photo">
+          <img src="photo-helen.jpg" alt="Helen Lancaster — Nutricore Health Coach">
+          <div class="pc-photo-overlay"></div>
+          <div class="pc-photo-text">
+            <span class="pc-name">Associate Coach</span>
+            <span class="pc-coach">Helen Lancaster</span>
+            <span class="pc-role">Naturopathic Health Coach · CNM qualified</span>
+          </div>
         </div>
         <div class="pc-body">
+          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Helen specialises in supporting midlife women through perimenopause, weight management, and sustainable lifestyle change. Warm, practical, and thorough.</p>
           <div class="price-main">
             <span class="currency">£</span>
             <span class="amount">585</span>
@@ -687,7 +713,7 @@ h3 {
           <ul class="pc-feats">
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full health intake &amp; baseline review
+              Full health intake &amp; 4-day food diary review
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -707,22 +733,35 @@ h3 {
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Clinical oversight from Marie throughout
+              Clinical oversight &amp; supplement review by Marie throughout
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Private test facilitation &amp; analysis where required
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Discounted dispensary access for high-quality supplements
             </li>
           </ul>
-          <a href="#book" class="btn btn-out" style="width:100%;text-align:center;">Book with Helen</a>
+          <a href="#book" class="btn btn-teal" style="width:100%;text-align:center;">Book with Helen</a>
         </div>
       </div>
 
       <!-- Marie -->
       <div class="price-card featured">
-        <div class="pc-head">
-          <span class="pc-badge">Founder</span>
-          <span class="pc-name">Clinical Lead</span>
-          <span class="pc-coach">Marie Frost</span>
-          <span class="pc-role">Naturopathic Health Coach &amp; Nutritional Therapist</span>
+        <div class="pc-photo">
+          <img src="photo-marie-session.jpg" alt="Marie Frost — Nutricore Health founder">
+          <div class="pc-photo-overlay"></div>
+          <span class="pc-badge avail">Limited availability</span>
+          <div class="pc-photo-text">
+            <span class="pc-name">Founder &amp; Clinical Lead</span>
+            <span class="pc-coach">Marie Frost</span>
+            <span class="pc-role">Naturopathic Health Coach &amp; Nutritional Therapist</span>
+          </div>
         </div>
         <div class="pc-body">
+          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Marie founded Nutricore Health with a clear mission: cut through the noise. As clinical lead, she takes a small number of her own clients alongside her oversight and business development work.</p>
           <div class="price-main">
             <span class="currency">£</span>
             <span class="amount">785</span>
@@ -731,7 +770,7 @@ h3 {
           <ul class="pc-feats">
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full health intake &amp; baseline review
+              Full health intake &amp; 4-day food diary review
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -751,7 +790,11 @@ h3 {
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Supplement review &amp; discounted dispensary access
+              Supplement review &amp; private test facilitation where required
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Discounted dispensary access for high-quality supplements
             </li>
           </ul>
           <a href="#book" class="btn btn-teal" style="width:100%;text-align:center;">Book with Marie</a>
@@ -763,6 +806,9 @@ h3 {
     <div class="payment-note rv d2">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <p><strong>Payment plans available.</strong> Both programmes can be spread across multiple payments. Options are shown at the time of booking. Not sure which coach is right for you? Book a free discovery call and we'll help you decide.</p>
+    </div>
+    <div class="pricing-team-link rv d3">
+      <a href="/about.html">Meet the full Nutricore Health team &rarr;</a>
     </div>
   </div>
 </section>
@@ -893,7 +939,7 @@ h3 {
             <span>What's the difference between Marie and Helen?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">Both are registered naturopathic health coaches, qualified through the College of Naturopathic Medicine. Marie is also a nutritional therapist and has a clinical background that allows for supplement review — which is available as an add-on when working with her directly. All associate programmes, including Helen's, receive clinical oversight from Marie throughout. Not sure which is right for you? That's exactly what the discovery call is for.</div>
+          <div class="faq-a">Both are registered naturopathic health coaches, qualified through the College of Naturopathic Medicine, and both programmes include the same clinical support from Marie — supplement review, private test facilitation where needed, and full clinical oversight throughout. The difference is who delivers your 1:1 sessions. Helen works with you directly on a fortnightly basis, with Marie working behind the scenes on the clinical side. Working with Helen is genuinely great value — you get the full Nutricore clinical resource at a lower price point. Marie takes a small number of her own clients directly alongside her clinical and business development work, so her availability is limited. Not sure which suits you? That's exactly what the discovery call is for.</div>
         </div>
 
         <div class="faq-item">
@@ -925,7 +971,7 @@ h3 {
             <span>Are supplements part of the programme?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">Food comes first — always. That said, Marie reviews your supplement status and current stack as part of every coaching programme, whichever coach you work with. If there are gaps or anything that isn't serving you, that gets addressed. Where supplements are appropriate, clients have access to a discounted dispensary for high-quality products at better-than-retail prices. Nothing is pushed. Everything is considered in the context of your full picture.</div>
+          <div class="faq-a">Food comes first — always. That said, Marie reviews your supplement status and current stack as part of every coaching programme, regardless of which coach delivers your sessions. If there are gaps or anything that isn't serving you, that gets addressed. Where private testing is relevant, Marie can facilitate and analyse that too. Clients on all programmes have access to a discounted dispensary for high-quality products at better-than-retail prices. Nothing is pushed. Everything is considered in the context of your full picture.</div>
         </div>
 
         <div class="faq-item">
