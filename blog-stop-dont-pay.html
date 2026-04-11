@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop. Don't Tap Pay. | Nutricore Health</title>
+<meta name="description" content="The supplement industry and wellness influencers are very good at what they do. That doesn't make them right. Here's what to do instead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:       #03989e;
+  --teal-dark:  #027a80;
+  --teal-deep:  #0d3d40;
+  --teal-pale:  #eaf5f6;
+  --teal-mid:   #b2dfe2;
+  --pink:       #ff66c4;
+  --pink-pale:  #fff0f9;
+  --cream:      #f5f0eb;
+  --cream-dark: #e8e0d6;
+  --white:      #ffffff;
+  --text:       #5c5c5c;
+  --text-dark:  #3a3a3a;
+  --head:       'DM Sans', sans-serif;
+  --body:       'Poppins', sans-serif;
+  --max:        1140px;
+  --r:          5px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.tc { color: var(--teal); } .pk { color: var(--pink); }
+.btn { display: inline-block; font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; padding: 15px 32px; border-radius: var(--r); border: 2px solid transparent; transition: all .22s ease; }
+.btn-teal { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-teal:hover { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(3,152,158,.22); }
+.btn-out  { background: transparent; color: var(--teal); border-color: var(--teal); }
+.btn-out:hover { background: var(--teal); color: #fff; transform: translateY(-1px); }
+.btn-white { background: var(--white); color: var(--teal-dark); border-color: var(--white); }
+.btn-white:hover { background: transparent; color: var(--white); transform: translateY(-1px); }
+.btn-outw { background: transparent; color: rgba(255,255,255,.88); border-color: rgba(255,255,255,.4); }
+.btn-outw:hover { background: rgba(255,255,255,.1); transform: translateY(-1px); }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(245,240,235,.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--cream-dark); transition: box-shadow .3s; }
+.nav.scrolled { box-shadow: 0 2px 24px rgba(13,61,64,.07); }
+.nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-words strong { display: block; font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); }
+.logo-words span   { display: block; font-family: var(--body); font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--text); margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; color: var(--text); transition: color .2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--teal); transform: scaleX(0); transition: transform .2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--teal); }
+.nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { font-family: var(--body); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 12px 22px; border-radius: var(--r); transition: all .2s; }
+.nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+.mob { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 199; padding: 40px; flex-direction: column; overflow-y: auto; transform: translateX(100%); transition: transform .3s ease; }
+.mob.open { transform: none; }
+.mob a { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); padding: 16px 0; border-bottom: 1px solid var(--cream-dark); display: block; }
+.mob .btn { margin-top: 28px; display: block; text-align: center; }
+
+/* POST HERO */
+.post-hero {
+  background: var(--teal); padding-top: 70px;
+  position: relative; overflow: hidden;
+}
+.post-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(140deg, var(--teal-dark) 0%, var(--teal) 100%); pointer-events: none; }
+.post-hero-inner { position: relative; z-index: 1; padding: 68px 48px 72px; max-width: 800px; margin: 0 auto; }
+.post-back { display: inline-flex; align-items: center; gap: 7px; font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 28px; transition: color .2s; }
+.post-back:hover { color: rgba(255,255,255,.85); }
+.post-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.post-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.post-tag { font-family: var(--body); font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; background: rgba(255,255,255,.15); color: rgba(255,255,255,.8); }
+.post-date { font-family: var(--body); font-size: 11px; font-weight: 300; color: rgba(255,255,255,.45); }
+.post-hero h1 { font-family: var(--head); font-size: clamp(32px, 5vw, 58px); font-weight: 700; line-height: 1.02; letter-spacing: -.025em; color: #fff; margin-bottom: 20px; }
+.post-hero-sub { font-family: var(--body); font-size: 17px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,.7); max-width: 560px; }
+
+/* POST BODY */
+.post-layout { background: var(--cream); padding: 80px 0 100px; }
+.post-grid { display: grid; grid-template-columns: 1fr 300px; gap: 72px; align-items: start; max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+
+/* article content */
+.post-content { background: var(--white); border-radius: 8px; padding: 52px 48px; border: 1px solid var(--cream-dark); }
+
+.post-content p { font-family: var(--body); font-size: 16px; font-weight: 300; line-height: 1.82; color: var(--text); margin-bottom: 22px; }
+.post-content p:last-child { margin-bottom: 0; }
+.post-content strong { font-weight: 600; color: var(--text-dark); }
+
+.post-content h2 { font-family: var(--head); font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -.018em; color: var(--teal); margin: 40px 0 16px; line-height: 1.1; }
+.post-content h3 { font-family: var(--head); font-size: 19px; font-weight: 700; letter-spacing: -.015em; color: var(--text-dark); margin: 32px 0 12px; }
+
+/* pull quote */
+.post-pull { border-left: 3px solid var(--pink); padding: 16px 22px; margin: 32px 0; background: var(--cream); border-radius: 0 var(--r) var(--r) 0; }
+.post-pull p { font-family: var(--body); font-size: 17px; font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.6; margin: 0; }
+
+/* numbered list */
+.post-list { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
+.post-list-item { display: grid; grid-template-columns: 36px 1fr; gap: 0; padding: 20px 0; border-bottom: 1px solid var(--cream-dark); }
+.post-list-item:first-child { border-top: 1px solid var(--cream-dark); }
+.post-list-num { font-family: var(--head); font-size: 22px; font-weight: 700; color: var(--teal-mid); letter-spacing: -.03em; line-height: 1.3; }
+.post-list-text { font-family: var(--body); font-size: 15px; font-weight: 300; color: var(--text); line-height: 1.7; padding-top: 3px; }
+.post-list-text strong { font-weight: 600; color: var(--text-dark); }
+
+/* author */
+.post-author { display: flex; align-items: center; gap: 16px; margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--cream-dark); }
+.author-img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: center top; background: var(--cream-dark); flex-shrink: 0; }
+.author-text strong { display: block; font-family: var(--head); font-size: 15px; font-weight: 700; color: var(--text-dark); letter-spacing: -.01em; margin-bottom: 2px; }
+.author-text span { font-family: var(--body); font-size: 12px; font-weight: 300; color: var(--text); }
+
+/* SIDEBAR */
+.post-sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 90px; }
+
+.sidebar-card { background: var(--white); border-radius: 8px; padding: 24px 22px; border: 1px solid var(--cream-dark); }
+.sidebar-label { font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; display: block; }
+.sidebar-card h3 { font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.015em; color: var(--text-dark); margin-bottom: 10px; }
+.sidebar-card p { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.6; margin-bottom: 16px; }
+.sidebar-card .btn { width: 100%; text-align: center; display: block; }
+
+.sidebar-tag-label { font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--text); opacity: .5; margin-bottom: 10px; display: block; }
+.sidebar-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sidebar-tag { font-family: var(--body); font-size: 11px; font-weight: 500; color: var(--text); background: var(--cream); border: 1px solid var(--cream-dark); border-radius: 20px; padding: 4px 12px; transition: all .2s; cursor: pointer; }
+.sidebar-tag:hover { background: var(--teal-pale); border-color: var(--teal-mid); color: var(--teal); }
+
+/* CTA band */
+.cta { background: var(--teal); }
+.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+.cta-inner h2 { font-family: var(--head); font-size: clamp(28px, 4vw, 48px); font-weight: 700; line-height: 1.06; letter-spacing: -.018em; color: #fff; }
+.cta-inner h2 .pk { color: var(--pink); }
+.cta-inner p { font-family: var(--body); font-size: 15px; font-weight: 300; color: rgba(255,255,255,.65); margin-top: 10px; line-height: 1.7; }
+.cta-btns { display: flex; flex-direction: column; gap: 11px; align-items: flex-end; white-space: nowrap; }
+
+/* FOOTER */
+.footer { background: var(--teal-deep); padding: 72px 0 40px; }
+.fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.fw { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.fs { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 4px 0 16px; }
+.fd { font-family: var(--body); font-size: 13px; color: rgba(255,255,255,.38); font-weight: 300; line-height: 1.72; max-width: 248px; margin-bottom: 20px; }
+.socials { display: flex; gap: 8px; }
+.soc { width: 33px; height: 33px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.36); transition: all .2s; }
+.soc svg { width: 13px; height: 13px; fill: currentColor; }
+.soc:hover { border-color: var(--teal); color: var(--teal); background: rgba(3,152,158,.12); }
+.fcol-t { font-family: var(--body); font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 16px; }
+.flinks { display: flex; flex-direction: column; gap: 9px; }
+.flinks a { font-family: var(--body); font-size: 13.5px; color: rgba(255,255,255,.48); font-weight: 300; transition: color .2s; }
+.flinks a:hover { color: rgba(255,255,255,.9); }
+.fbot { border-top: 1px solid rgba(255,255,255,.07); padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.fcopy { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; }
+.fleg { display: flex; gap: 20px; }
+.fleg a { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; transition: color .2s; }
+.fleg a:hover { color: rgba(255,255,255,.5); }
+
+@keyframes fu { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+
+@media (max-width: 1024px) {
+  .post-grid { grid-template-columns: 1fr 260px; gap: 48px; }
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .post-grid { grid-template-columns: 1fr; padding: 0 24px; }
+  .post-sidebar { position: static; }
+  .cta-inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-btns { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 24px; }
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+  .post-hero-inner { padding: 48px 24px 56px; }
+  .post-content { padding: 32px 24px; }
+  .fg { grid-template-columns: 1fr; }
+  .fbot { flex-direction: column; text-align: center; }
+  .fleg { flex-wrap: wrap; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="logo-mark.png" alt="Nutricore Health logomark"
+           style="width:38px;height:38px;object-fit:contain;flex-shrink:0;
+                  filter:invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);">
+      <div class="logo-words">
+        <strong>Nutricore Health</strong>
+        <span>Women's Coaching</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/coaching.html">Coaching</a>
+      <a href="/corporate.html">Corporate</a>
+      <a href="/about.html">About</a>
+      <a href="/resources.html" class="active">Resources</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <a href="/coaching.html" class="nav-cta">Book a Call</a>
+    <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="/coaching.html"  onclick="closeM()">Coaching</a>
+  <a href="/corporate.html" onclick="closeM()">Corporate</a>
+  <a href="/about.html"     onclick="closeM()">About</a>
+  <a href="/resources.html" onclick="closeM()">Resources</a>
+  <a href="/contact.html"   onclick="closeM()">Contact</a>
+  <a href="/coaching.html" class="btn btn-teal" onclick="closeM()">Book a Free Call</a>
+</div>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="post-hero-inner">
+    <a href="/resources.html" class="post-back">
+      <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Rants &amp; Resources
+    </a>
+    <div class="post-meta">
+      <span class="post-tag">General</span>
+      <span class="post-date">July 2024 · By Marie Frost</span>
+    </div>
+    <h1>Stop. Don't tap pay.</h1>
+    <p class="post-hero-sub">The supplement industry and wellness influencers are very good at what they do. That doesn't make them right. Here's how to cut through it.</p>
+  </div>
+</div>
+
+<!-- POST CONTENT -->
+<div class="post-layout">
+  <div class="post-grid">
+
+    <!-- ARTICLE -->
+    <article class="post-content">
+
+      <p>There will always be another influencer or health guru ready to appear just when you're having a bad week, armed with a product that promises to fix everything. The marketing is slick, the before-and-after photos are compelling, and the buy button is one tap away. I understand why people fall for it — I have felt the pull myself, and I know how these campaigns are built.</p>
+
+      <p>The health industry is very good at identifying pain points. They invest heavily in understanding what women are worried about, what they're embarrassed to talk about, and what they'd pay to resolve quickly. Then they build products and messaging around those exact vulnerabilities. It is not a coincidence that every new supplement launch seems to speak directly to whatever you're currently struggling with. That is entirely by design.</p>
+
+      <div class="post-pull">
+        <p>"It is not your fault. You are not gullible for being drawn in. These are sophisticated campaigns run by professional marketers with significant budgets and years of research behind them."</p>
+      </div>
+
+      <p>This is a large part of why I trained in this area — to understand how the body actually works, how nutrition and lifestyle genuinely affect health, and to be able to sort the evidence from the noise with confidence. And to help other women do the same.</p>
+
+      <h2>Four things worth considering before you tap pay</h2>
+
+      <div class="post-list">
+        <div class="post-list-item">
+          <span class="post-list-num">01</span>
+          <p class="post-list-text"><strong>Your health is individual.</strong> There is no one-size-fits-all programme, supplement, or protocol — because your body, your history, your lifestyle, and your goals are specific to you. Something that works well for someone else may be irrelevant or even counterproductive for you. Any product or programme claiming to work for everyone is, by definition, not built for anyone in particular.</p>
+        </div>
+        <div class="post-list-item">
+          <span class="post-list-num">02</span>
+          <p class="post-list-text"><strong>Start with the basics before spending on supplements.</strong> Spending £80 a month on supplements while ignoring sleep, stress, and the fundamentals of how you eat is putting the cart well before the horse. The basics are not exciting, but they work. Sort those first — then, if there's still a gap, talk to someone qualified about whether a supplement is actually indicated for your situation.</p>
+        </div>
+        <div class="post-list-item">
+          <span class="post-list-num">03</span>
+          <p class="post-list-text"><strong>Health does not have to be complicated.</strong> Going to bed at a consistent time, getting outside for a walk, drinking enough water, and eating breakfast — these are unglamorous, but the results I have seen from clients who simply do these things consistently are significant. The wellness industry has a vested interest in making health feel complex. It is not.</p>
+        </div>
+        <div class="post-list-item">
+          <span class="post-list-num">04</span>
+          <p class="post-list-text"><strong>Most diets work for the same reason.</strong> The trending approaches — whatever they're calling it this year — usually produce results because they all, in some form, return to whole foods, adequate protein, fibre, vegetables, hydration, and cutting back on processed food. That's it. The packaging changes. The underlying logic does not. You do not need a branded programme to apply that logic to your own life.</p>
+        </div>
+      </div>
+
+      <p>Real change comes from clearing out the noise, getting honest about what your body actually needs, and working on the fundamentals — consistently and without drama. It is not a compelling tagline. It does not photograph well. But it works in a way that no supplement subscription ever will.</p>
+
+      <p>If you're ready to work on your own boring basics with proper support, a free discovery call is the right place to start. No products, no sales pitch — just an honest conversation about where you are and what would actually help.</p>
+
+      <div class="post-author">
+        <img src="photo-marie-personal.jpg" alt="Marie Frost" class="author-img">
+        <div class="author-text">
+          <strong>Marie Frost</strong>
+          <span>Founder, Nutricore Health · Naturopathic Health Coach &amp; Nutritional Therapist</span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="post-sidebar">
+
+      <div class="sidebar-card">
+        <span class="sidebar-label">Work with us</span>
+        <h3>Ready to sort the basics?</h3>
+        <p>A free 20-minute discovery call is the right place to start. No obligation, no sales pitch.</p>
+        <a href="/contact.html?type=coaching" class="btn btn-teal">Book a Free Call</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="sidebar-label">Also on the site</span>
+        <h3>How the programme works</h3>
+        <p>Twelve weeks, five pillars, one coach. Built around your actual life.</p>
+        <a href="/coaching.html" class="btn btn-out">See Coaching</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="sidebar-tag-label">Topics</span>
+        <div class="sidebar-tags">
+          <span class="sidebar-tag">Nutrition</span>
+          <span class="sidebar-tag">Supplements</span>
+          <span class="sidebar-tag">Basics</span>
+          <span class="sidebar-tag">Wellness industry</span>
+          <span class="sidebar-tag">Habits</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section style="padding: 68px 0; background: var(--teal);">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div>
+        <h2>Done with the noise.<br>Ready for <span class="pk">real support?</span></h2>
+        <p>Book a free discovery call or browse the coaching options.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="/contact.html?type=coaching" class="btn btn-white">Book a Free Call</a>
+        <a href="/coaching.html" class="btn btn-outw">See Coaching</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fw">Nutricore Health</div>
+        <span class="fs">Women's Coaching · UK</span>
+        <p class="fd">Practical, evidence-informed health coaching for women 35+. Real support, no fads.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="soc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a><a href="/contact.html">Contact</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="/coaching.html">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+  const mob = document.getElementById('mob');
+  function openM()  { mob.style.display = 'flex'; requestAnimationFrame(() => mob.classList.add('open')); document.body.style.overflow = 'hidden'; }
+  function closeM() { mob.classList.remove('open'); setTimeout(() => mob.style.display = 'none', 300); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>
