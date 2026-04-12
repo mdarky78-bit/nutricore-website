@@ -535,16 +535,4 @@ h2 {
   // Pre-select dropdown based on URL parameter
   // Usage: /contact.html?type=coaching or ?type=corporate
   (function() {
-    const params = new URLSearchParams(window.location.search);
-    const type = params.get('type');
-    if (type) {
-      const sel = document.getElementById('enquiry-type');
-      const opt = sel.querySelector('option[value="' + type + '"]');
-      if (opt) opt.selected = true;
-    }
-  })();
-
-  function handleSubmit() {
-    const email = document.getElementById('email');
-    if (!email.value || !email.value.includes('@')) {
-  
+    const params = new URLSear
