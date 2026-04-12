@@ -152,12 +152,12 @@ h3 {
    MARIE — Register 3 cream
 ============================================= */
 .marie { background: var(--cream); }
-.marie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.marie-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 60px; align-items: start; }
 
 .marie-photo-wrap { position: relative; }
 .marie-photo {
   aspect-ratio: 4/5; overflow: hidden;
-  border-radius: var(--r); min-height: 500px;
+  border-radius: var(--r); min-height: 420px;
 }
 .marie-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .marie-badge {
@@ -325,8 +325,9 @@ h3 {
   .fg { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 860px) {
-  .marie-grid { grid-template-columns: 1fr; gap: 48px; }
-  .marie-badge { left: 12px; }
+  .marie-grid { grid-template-columns: 1fr; gap: 40px; }
+  .marie-badge { left: 12px; bottom: 20px; }
+  .marie-photo { min-height: 360px; }
   .cta-inner { grid-template-columns: 1fr; gap: 28px; }
   .cta-btns { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
   .hero-panel { display: none; }
@@ -336,7 +337,13 @@ h3 {
   .sec { padding: 68px 0; }
   .nav-links, .nav-cta { display: none; }
   .ham { display: flex; }
-  .team-grid { grid-template-columns: 1fr; max-width: 380px; }  .approach-grid { grid-template-columns: 1fr; }
+  .marie-photo { min-height: 280px; }
+  .marie-badge { left: 8px; bottom: 14px; padding: 12px 14px; }
+  .marie-badge .n { font-size: 22px; }
+  .pull-quote { padding: 12px 16px; margin: 18px 0; }
+  .cred-list { margin: 18px 0 22px; }
+  .team-grid { grid-template-columns: 1fr; max-width: 380px; }
+  .approach-grid { grid-template-columns: 1fr; }
   .approach-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
   .approach-item:last-child { border-bottom: none; }
   .accreds-logos { gap: 28px; }
@@ -424,7 +431,9 @@ h3 {
 
         <p class="body-txt">I spent over 20 years in corporate life — including senior management roles — before retraining as a health practitioner. That background matters, because I know first-hand what sustained pressure at work does to your sleep, your stress levels, your relationship with food, and your sense of yourself.</p>
 
-        <p class="body-txt">My decision to retrain wasn't academic. It came from my own health — anxiety I managed and largely resolved through diet and lifestyle changes, a fertility journey, gestational diabetes during pregnancy, and now navigating perimenopause myself. Each of those experiences taught me something that no textbook alone could. They also made me very clear on what actually works versus what the wellness industry wants you to believe works.</p>
+        <p class="body-txt">My decision to retrain was both academic and personal. I have always had a genuine passion for nutrition and how the body works — but it was my own health that became the catalyst. Anxiety I managed and largely resolved through diet and lifestyle changes, a fertility journey, gestational diabetes during pregnancy, and navigating perimenopause. Each of those experiences taught me something that no textbook alone could.</p>
+
+        <p class="body-txt">More recently I have experienced overwhelm and burnout — something that is so often dismissed or misread as a hormonal issue in women our age. Living through that, and understanding what was actually driving it, reinforced something I see constantly in the women I work with: the load that midlife women carry — professionally, personally, and physically — is significant, and it deserves to be taken seriously rather than explained away.</p>
 
         <div class="pull-quote">
           <p>"I changed my diet, found a new love in strength training, discovered how to slow the pace down, and learnt to listen to my body. Those changes didn't just improve my health — they changed my life."</p>
