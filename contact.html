@@ -532,7 +532,41 @@ h2 {
   }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
   document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
-  // Pre-select dropdown based on URL parameter
-  // Usage: /contact.html?type=coaching or ?type=corporate
   (function() {
-    const params = new URLSear
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    if (type) {
+      const sel = document.getElementById('enquiry-type');
+      if (sel) {
+        const opt = sel.querySelector('option[value="' + type + '"]');
+        if (opt) opt.selected = true;
+      }
+    }
+  })();
+
+  function handleSubmit() {
+    const email = document.getElementById('email');
+    if (!email.value || !email.value.includes('@')) {
+      email.style.borderColor = 'var(--pink)';
+      email.focus();
+      return;
+    }
+    email.style.borderColor = '';
+
+    const formWrap = document.getElementById('form-wrap');
+    const data = new FormData();
+    data.append('form-name', 'contact');
+    data.append('first-name', document.getElementById('first-name').value);
+    data.append('last-name',  document.getElementById('last-name').value);
+    data.append('email',      email.value);
+    data.append('enquiry-type', document.getElementById('enquiry-type').value);
+    data.append('message',    document.getElementById('message').value);
+
+    fetch('/', { method: 'POST', body: data }).catch(() => {});
+
+    formWrap.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
