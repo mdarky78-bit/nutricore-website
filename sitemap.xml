@@ -3,49 +3,56 @@
 
   <url>
     <loc>https://www.nutricorehealth.com/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.nutricorehealth.com/coaching.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.nutricorehealth.com/corporate.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.nutricorehealth.com/learning.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.nutricorehealth.com/about.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.nutricorehealth.com/resources.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
+    <loc>https://www.nutricorehealth.com/blog-stop-dont-pay.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://www.nutricorehealth.com/contact.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
