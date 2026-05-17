@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Burnout Actually Looks Like — and Why Fixing Your Hormones Might Not Be Enough | Nutricore Health</title>
+<meta name="description" content="Most burned out women are still showing up. Still working. Still managing everything. Here's what burnout actually looks like — and why HRT might not be the whole answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:       #03989e;
+  --teal-dark:  #027a80;
+  --teal-deep:  #0d3d40;
+  --teal-pale:  #eaf5f6;
+  --teal-mid:   #b2dfe2;
+  --pink:       #ff66c4;
+  --pink-pale:  #fff0f9;
+  --cream:      #f5f0eb;
+  --cream-dark: #e8e0d6;
+  --white:      #ffffff;
+  --text:       #5c5c5c;
+  --text-dark:  #3a3a3a;
+  --head:       'DM Sans', sans-serif;
+  --body:       'Poppins', sans-serif;
+  --max:        1140px;
+  --r:          5px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.tc { color: var(--teal); } .pk { color: var(--pink); }
+.btn { display: inline-block; font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; padding: 15px 32px; border-radius: var(--r); border: 2px solid transparent; transition: all .22s ease; }
+.btn-teal { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-teal:hover { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(3,152,158,.22); }
+.btn-out  { background: transparent; color: var(--teal); border-color: var(--teal); }
+.btn-out:hover { background: var(--teal); color: #fff; transform: translateY(-1px); }
+.btn-white { background: var(--white); color: var(--teal-dark); border-color: var(--white); }
+.btn-white:hover { background: transparent; color: var(--white); transform: translateY(-1px); }
+.btn-outw { background: transparent; color: rgba(255,255,255,.88); border-color: rgba(255,255,255,.4); }
+.btn-outw:hover { background: rgba(255,255,255,.1); transform: translateY(-1px); }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(245,240,235,.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--cream-dark); transition: box-shadow .3s; }
+.nav.scrolled { box-shadow: 0 2px 24px rgba(13,61,64,.07); }
+.nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-words strong { display: block; font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); }
+.logo-words span   { display: block; font-family: var(--body); font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--text); margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; color: var(--text); transition: color .2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--teal); transform: scaleX(0); transition: transform .2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--teal); }
+.nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { font-family: var(--body); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 12px 22px; border-radius: var(--r); transition: all .2s; }
+.nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+.mob { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 199; padding: 40px; flex-direction: column; overflow-y: auto; transform: translateX(100%); transition: transform .3s ease; }
+.mob.open { transform: none; }
+.mob a { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); padding: 16px 0; border-bottom: 1px solid var(--cream-dark); display: block; }
+.mob .btn { margin-top: 28px; display: block; text-align: center; }
+
+/* POST HERO */
+.post-hero { background: var(--teal); padding-top: 70px; position: relative; overflow: hidden; }
+.post-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(140deg, var(--teal-dark) 0%, var(--teal) 100%); pointer-events: none; }
+.post-hero-inner { position: relative; z-index: 1; padding: 68px 48px 72px; max-width: 800px; margin: 0 auto; }
+.post-back { display: inline-flex; align-items: center; gap: 7px; font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 28px; transition: color .2s; }
+.post-back:hover { color: rgba(255,255,255,.85); }
+.post-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.post-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.post-tag { font-family: var(--body); font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; background: rgba(255,255,255,.15); color: rgba(255,255,255,.8); }
+.post-date { font-family: var(--body); font-size: 11px; font-weight: 300; color: rgba(255,255,255,.45); }
+.post-hero h1 { font-family: var(--head); font-size: clamp(32px, 5vw, 58px); font-weight: 700; line-height: 1.02; letter-spacing: -.025em; color: #fff; margin-bottom: 20px; }
+.post-hero-sub { font-family: var(--body); font-size: 17px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,.7); max-width: 560px; }
+
+/* POST BODY */
+.post-layout { background: var(--cream); padding: 80px 0 100px; }
+.post-grid { display: grid; grid-template-columns: 1fr 300px; gap: 72px; align-items: start; max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+
+/* article */
+.post-content { background: var(--white); border-radius: 8px; padding: 52px 48px; border: 1px solid var(--cream-dark); }
+.post-content p { font-family: var(--body); font-size: 16px; font-weight: 300; line-height: 1.82; color: var(--text); margin-bottom: 22px; }
+.post-content p:last-child { margin-bottom: 0; }
+.post-content strong { font-weight: 600; color: var(--text-dark); }
+.post-content h2 { font-family: var(--head); font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -.018em; color: var(--teal); margin: 44px 0 16px; line-height: 1.1; }
+.post-content h2:first-of-type { margin-top: 0; }
+
+/* pull quote */
+.post-pull { border-left: 3px solid var(--pink); padding: 16px 22px; margin: 32px 0; background: var(--cream); border-radius: 0 var(--r) var(--r) 0; }
+.post-pull p { font-family: var(--body); font-size: 17px; font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.6; margin: 0; }
+
+/* divider */
+.post-rule { border: none; border-top: 1px solid var(--cream-dark); margin: 36px 0; }
+
+/* author */
+.post-author { display: flex; align-items: center; gap: 16px; margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--cream-dark); }
+.author-img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--teal-pale); }
+.author-text strong { display: block; font-family: var(--head); font-size: 15px; font-weight: 700; color: var(--text-dark); letter-spacing: -.01em; }
+.author-text span { display: block; font-family: var(--body); font-size: 12px; font-weight: 300; color: var(--text); margin-top: 3px; line-height: 1.5; }
+
+/* sidebar */
+.post-sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 94px; }
+.sidebar-card { background: var(--white); border-radius: 8px; padding: 28px 24px; border: 1px solid var(--cream-dark); }
+.sidebar-label { display: block; font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+.sidebar-card h3 { font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.015em; color: var(--text-dark); margin-bottom: 10px; line-height: 1.2; }
+.sidebar-card p { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.65; margin-bottom: 20px; }
+.sidebar-tag-label { display: block; font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--text); margin-bottom: 12px; }
+.sidebar-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.sidebar-tag { font-family: var(--body); font-size: 11px; font-weight: 500; color: var(--teal-dark); background: var(--teal-pale); padding: 4px 11px; border-radius: 20px; }
+
+/* CTA band */
+.cta-band { padding: 68px 0; background: var(--teal); }
+.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+.cta-inner h2 { font-family: var(--head); font-size: clamp(28px, 4vw, 46px); font-weight: 700; line-height: 1.06; letter-spacing: -.018em; color: #fff; }
+.cta-inner h2 .pk { color: var(--pink); }
+.cta-inner p { font-family: var(--body); font-size: 15px; font-weight: 300; color: rgba(255,255,255,.65); margin-top: 10px; line-height: 1.7; }
+.cta-btns { display: flex; flex-direction: column; gap: 11px; align-items: flex-end; white-space: nowrap; }
+
+/* FOOTER */
+.footer { background: var(--teal-deep); padding: 72px 0 40px; }
+.fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.fw { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.fs { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 4px 0 16px; }
+.fd { font-family: var(--body); font-size: 13px; color: rgba(255,255,255,.38); font-weight: 300; line-height: 1.72; max-width: 248px; margin-bottom: 20px; }
+.socials { display: flex; gap: 8px; }
+.soc { width: 33px; height: 33px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.36); transition: all .2s; }
+.soc svg { width: 13px; height: 13px; fill: currentColor; }
+.soc:hover { border-color: var(--teal); color: var(--teal); background: rgba(3,152,158,.12); }
+.fcol-t { font-family: var(--body); font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 16px; }
+.flinks { display: flex; flex-direction: column; gap: 9px; }
+.flinks a { font-family: var(--body); font-size: 13.5px; color: rgba(255,255,255,.48); font-weight: 300; transition: color .2s; }
+.flinks a:hover { color: rgba(255,255,255,.9); }
+.fbot { border-top: 1px solid rgba(255,255,255,.07); padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.fcopy { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; }
+.fleg { display: flex; gap: 20px; }
+.fleg a { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; transition: color .2s; }
+.fleg a:hover { color: rgba(255,255,255,.5); }
+
+@keyframes fu { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .post-grid { grid-template-columns: 1fr; gap: 40px; }
+  .post-sidebar { position: static; }
+  .cta-inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-btns { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 24px; }
+  .post-hero-inner { padding: 48px 24px 56px; }
+  .post-grid { padding: 0 24px; }
+  .post-content { padding: 36px 24px; }
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+  .fg { grid-template-columns: 1fr; }
+  .fbot { flex-direction: column; text-align: center; }
+  .fleg { flex-wrap: wrap; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-words">
+        <strong>Nutricore Health</strong>
+        <span>Women's Coaching</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/coaching.html">Coaching</a>
+      <a href="/corporate.html">Corporate</a>
+      <a href="/#how">How It Works</a>
+      <a href="/about.html">About</a>
+      <a href="/resources.html" class="active">Resources</a>
+    </div>
+    <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&appointmentType=91669290" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+    <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="/coaching.html" onclick="closeM()">Coaching</a>
+  <a href="/corporate.html" onclick="closeM()">Corporate</a>
+  <a href="/#how" onclick="closeM()">How It Works</a>
+  <a href="/about.html" onclick="closeM()">About</a>
+  <a href="/resources.html" onclick="closeM()">Resources</a>
+  <a href="/contact.html" onclick="closeM()">Contact</a>
+  <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&appointmentType=91669290" class="btn btn-teal" onclick="closeM()" target="_blank" rel="noopener">Book a Free Call</a>
+</div>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="post-hero-inner">
+    <a href="/resources.html" class="post-back">
+      <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Rants &amp; Resources
+    </a>
+    <div class="post-meta">
+      <span class="post-tag">Resilience</span>
+      <span class="post-tag">Burnout</span>
+      <span class="post-date">May 2026</span>
+    </div>
+    <h1>What burnout actually looks like — and why fixing your hormones might not be enough</h1>
+    <p class="post-hero-sub">Most burned out women are still showing up. Still working. Still managing everything around them. Here is what is actually going on.</p>
+  </div>
+</div>
+
+<!-- POST BODY -->
+<div class="post-layout">
+  <div class="post-grid">
+
+    <article class="post-content">
+
+      <p>Burnout does not always look like someone who cannot get out of bed.</p>
+
+      <p>Most burned out women I know are still showing up. Still working. Still managing the house, the kids, the ageing parents, the job, the social calendar. Still holding everyone else together while quietly wondering why they feel so completely done.</p>
+
+      <p>That is the version of burnout nobody talks about. The high-functioning kind. The one that looks fine from the outside and feels like falling apart from the inside.</p>
+
+      <hr class="post-rule">
+
+      <h2>What is actually happening in your body</h2>
+
+      <p>When your nervous system has been running on high alert for too long, it does something quite logical. It starts switching things off.</p>
+
+      <p>Not dramatically. Not all at once. It just quietly begins to prioritise. It keeps the essentials running and drops everything it judges to be non-urgent. Sleep quality. Emotional regulation. Cognitive sharpness. Libido. Digestion. Joy.</p>
+
+      <p>This is not your body failing you. It is your body protecting you. The problem is that it was never designed to stay in that state for months or years at a time. And most of us have been asking it to do exactly that.</p>
+
+      <h2>What it actually feels like</h2>
+
+      <p>You read the same email three times and still cannot process it. You cannot decide what to make for dinner. Even choosing what to wear has started to feel like more effort than it should be.</p>
+
+      <p>You are more anxious than usual. Crying for no obvious reason. Shorter fuse. Snapping at the people you love and then feeling terrible about it.</p>
+
+      <p>You are tired but you cannot sleep properly. You wake at 3am and lie there with a brain that will not stop. You get up unrefreshed and do it all again.</p>
+
+      <p>Too much on. Overstretched. Supporting everyone else first. Too busy to stop. Rushing everything, including rest.</p>
+
+      <div class="post-pull">
+        <p>Sound familiar? These are not random symptoms. They are a pattern. And that pattern has a name.</p>
+      </div>
+
+      <h2>Why it hits harder in your 40s and 50s</h2>
+
+      <p>Burnout can happen at any age. But there is a reason it feels so much heavier now.</p>
+
+      <p>Your body's signals are louder. The hormonal shifts of perimenopause and menopause are real, and they do create genuine symptoms. But here is what often gets missed. Those hormonal changes and burnout overlap almost completely in how they feel. Fatigue. Brain fog. Anxiety. Sleep disruption. Mood changes. Weight shifts.</p>
+
+      <p>When everything looks the same on the surface, it is very easy to reach for the same answer.</p>
+
+      <h2>The honest conversation about HRT</h2>
+
+      <p>Last year I started HRT. I posted about it on social media and got a huge response, which told me everything I needed to know about how many women are sitting with the same questions.</p>
+
+      <p>I came off it in September 2025 after six months. I never posted about that part. This is me closing that loop.</p>
+
+      <p>HRT did not work for me. That is not a criticism of it. For some women it is genuinely life-changing and absolutely the right clinical decision. I would never suggest otherwise. But for me, it was not solving the problem. It was quietening the noise.</p>
+
+      <p>And that is the thing I want to say clearly, because I do not think anyone is saying it clearly enough right now.</p>
+
+      <p>The conversation about menopause has been overdue and I am glad it is happening. But somewhere along the way, menopause became the explanation for everything and HRT became the obvious fix. Women are being told their hormones are the problem before anyone has asked how they are actually living.</p>
+
+      <div class="post-pull">
+        <p>In my clinical experience, most women in their 40s and 50s who are struggling are not primarily dealing with a hormone problem. They are dealing with burnout. And burnout will not be fixed by adjusting your hormones.</p>
+      </div>
+
+      <p>For some women, HRT might be needed just to get stable enough to do the deeper work. If someone is in too deep, too depleted, you need to get them to a functional baseline first. But the burnout is still there underneath. It still needs addressing. And if it is not, nothing else will hold.</p>
+
+      <h2>What actually helps</h2>
+
+      <p>The fundamentals. Done properly. That is it.</p>
+
+      <p>Not another supplement protocol. Not a detox. Not an expensive test panel. The basics that we know matter and that most of us are not doing consistently enough.</p>
+
+      <p><strong>Sleep</strong>, because without it everything else is harder and your nervous system cannot regulate.</p>
+
+      <p><strong>Resilience</strong>, which is not about toughening up. It is about building your capacity to handle pressure and recover from it. This is the pillar I come back to more than any other with clients who are burned out. Your nervous system needs to learn that it is safe to come down from high alert. That takes time and the right support, but it is possible.</p>
+
+      <p><strong>Nutrition</strong>, because what you eat affects your cortisol, your mood, your sleep, and your energy in ways that are direct and measurable.</p>
+
+      <p><strong>Movement</strong>, because it matters more than most women give it credit for at this stage. Not a specific programme designed for your age. The fundamentals — strength, consistency, finding something you will actually do — have always been what counts. The goal is to find what fits your life and supports where you are, not to follow a trend dressed up as a solution.</p>
+
+      <p><strong>Joy</strong>. The most overlooked pillar. When did you last do something purely because it made you feel good? That question matters more than most people realise.</p>
+
+      <p>None of this is complicated. But it is hard to do alone, especially when you are already running on empty.</p>
+
+      <hr class="post-rule">
+
+      <p>My team and I — all of us women who have been through some version of this ourselves — work with women across all five of these areas in a structured 12-week programme. Not a diet plan. Not a generic wellness package. A proper look at how you are actually living and what needs to change.</p>
+
+      <p>If any of this has felt uncomfortably familiar, start with a free 20-minute call. No obligation. Just a conversation.</p>
+
+      <p><a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&appointmentType=91669290" style="color:var(--teal);font-weight:600;text-decoration:underline;" target="_blank" rel="noopener">Book a free discovery call</a></p>
+
+      <div class="post-author">
+        <img src="photo-marie-burnout.jpg" alt="Marie Frost" class="author-img">
+        <div class="author-text">
+          <strong>Marie Frost</strong>
+          <span>Founder &amp; Clinical Lead, Nutricore Health · Registered Naturopathic Health Coach &amp; Nutritional Therapist</span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="post-sidebar">
+
+      <div class="sidebar-card">
+        <span class="sidebar-label">Work with us</span>
+        <h3>Ready to look at what is actually going on?</h3>
+        <p>A free 20-minute discovery call is the right place to start. No obligation, no sales pitch.</p>
+        <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&appointmentType=91669290" class="btn btn-teal" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="sidebar-label">Also on the site</span>
+        <h3>How the programme works</h3>
+        <p>Twelve weeks, five pillars, one dedicated coach. Built around your actual life.</p>
+        <a href="/coaching.html" class="btn btn-out">See Coaching</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="sidebar-tag-label">Topics</span>
+        <div class="sidebar-tags">
+          <span class="sidebar-tag">Burnout</span>
+          <span class="sidebar-tag">Resilience</span>
+          <span class="sidebar-tag">Nervous system</span>
+          <span class="sidebar-tag">HRT</span>
+          <span class="sidebar-tag">Perimenopause</span>
+          <span class="sidebar-tag">Five pillars</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div>
+        <h2>Done with the noise.<br>Ready for <span class="pk">real support?</span></h2>
+        <p>Book a free discovery call or browse the coaching options.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&appointmentType=91669290" class="btn btn-white" target="_blank" rel="noopener">Book a Free Call</a>
+        <a href="/coaching.html" class="btn btn-outw">See Coaching</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fw">Nutricore Health</div>
+        <span class="fs">Women's Coaching · UK</span>
+        <p class="fd">Practical, evidence-informed health coaching for women 35+. Real support, no fads.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/nutricore_health" class="soc" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/18Jpo8rDbR/?mibextid=wwXIfr" class="soc" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/in/marie-frost-nutricore/" class="soc" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a><a href="/contact.html">Contact</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="/coaching.html">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+  const mob = document.getElementById('mob');
+  function openM()  { mob.style.display = 'flex'; requestAnimationFrame(() => mob.classList.add('open')); document.body.style.overflow = 'hidden'; }
+  function closeM() { mob.classList.remove('open'); setTimeout(() => mob.style.display = 'none', 300); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>
