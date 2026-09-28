@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Notice | Nutricore Health</title>
+<meta name="description" content="How Nutricore Health collects, uses and protects your personal information, including health information collected as part of our coaching services.">
+<link rel="canonical" href="https://www.nutricorehealth.com/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nutricorehealth.com/privacy.html">
+<meta property="og:title" content="Privacy Notice | Nutricore Health">
+<meta property="og:description" content="How Nutricore Health collects, uses and protects your personal information, including health information collected as part of our coaching services.">
+<meta property="og:image" content="https://www.nutricorehealth.com/photo-marie-session.jpg">
+<meta property="og:site_name" content="Nutricore Health">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Notice | Nutricore Health">
+<meta name="twitter:description" content="How Nutricore Health collects, uses and protects your personal information, including health information collected as part of our coaching services.">
+<meta name="twitter:image" content="https://www.nutricorehealth.com/photo-marie-session.jpg">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   NUTRICORE HEALTH — BRAND SYSTEM v5
+   privacy.html
+============================================ */
+:root {
+  --teal:       #03989e;
+  --teal-dark:  #027a80;
+  --teal-deep:  #0d3d40;
+  --teal-pale:  #eaf5f6;
+  --teal-mid:   #b2dfe2;
+  --pink:       #ff66c4;
+  --pink-pale:  #fff0f9;
+  --cream:      #f5f0eb;
+  --cream-dark: #e8e0d6;
+  --white:      #ffffff;
+  --text:       #5c5c5c;
+  --text-dark:  #3a3a3a;
+  --head:       'DM Sans', sans-serif;
+  --body:       'Poppins', sans-serif;
+  --max:        1140px;
+  --r:          5px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.wrap   { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.sec    { padding: 100px 0; }
+.sec-sm { padding: 68px 0; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--body);
+  font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 16px;
+}
+h2 {
+  font-family: var(--head); font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 700; line-height: 1.06; letter-spacing: -.018em; color: var(--teal);
+}
+.lead     { font-size: 17px; font-weight: 300; line-height: 1.78; color: var(--text); }
+.body-txt { font-size: 15px; font-weight: 300; line-height: 1.72; color: var(--text); }
+.tc { color: var(--teal); } .pk { color: var(--pink); }
+
+.btn {
+  display: inline-block; font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .13em; text-transform: uppercase; padding: 15px 32px;
+  border-radius: var(--r); border: 2px solid transparent; transition: all .22s ease;
+}
+.btn-teal { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-teal:hover { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(3,152,158,.22); }
+
+/* =============================================
+   NAV
+============================================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(245,240,235,.97); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cream-dark); transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(13,61,64,.07); }
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between; height: 70px;
+}
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-words strong { display: block; font-family: var(--head); font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); }
+.logo-words span   { display: block; font-family: var(--body); font-size: 9.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--text); margin-top: 2px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: .06em; color: var(--text); transition: color .2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--teal); transform: scaleX(0); transition: transform .2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta { font-family: var(--body); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 12px 22px; border-radius: var(--r); transition: all .2s; }
+.nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+.mob { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 199; padding: 40px; flex-direction: column; overflow-y: auto; transform: translateX(100%); transition: transform .3s ease; }
+.mob.open { transform: none; }
+.mob a { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--teal); padding: 16px 0; border-bottom: 1px solid var(--cream-dark); display: block; }
+.mob .btn { margin-top: 28px; display: block; text-align: center; }
+
+/* =============================================
+   HERO — short teal band
+============================================= */
+.hero {
+  min-height: 32vh; background: var(--teal);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-top: 70px; overflow: hidden; position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(140deg, var(--teal-dark) 0%, var(--teal) 55%, #04adb4 100%);
+  pointer-events: none;
+}
+.hero-bar { position: absolute; top: 0; left: 0; width: 4px; height: 180px; background: var(--pink); border-radius: 0 3px 3px 0; opacity: .7; z-index: 2; }
+.hero-content { position: relative; z-index: 3; padding: 52px 48px 56px; max-width: var(--max); margin: 0 auto; width: 100%; }
+.hero-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.hero-tag-line { width: 28px; height: 2px; background: var(--pink); border-radius: 2px; }
+.hero-tag-text { font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.hero h1 {
+  font-family: var(--head); font-size: clamp(34px, 5vw, 54px);
+  font-weight: 700; line-height: 1.04; letter-spacing: -.02em;
+  color: #fff; max-width: 640px; margin-bottom: 14px;
+}
+.hero-sub {
+  font-family: var(--body); font-size: 15px; font-weight: 300;
+  line-height: 1.7; color: rgba(255,255,255,.68); max-width: 480px;
+}
+
+/* =============================================
+   LEGAL CONTENT
+============================================= */
+.legal { background: var(--cream); }
+.legal-inner { max-width: 760px; margin: 0 auto; }
+
+.legal-meta {
+  border-bottom: 1px solid var(--cream-dark); padding-bottom: 28px; margin-bottom: 44px;
+}
+.legal-meta p { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--text); line-height: 1.8; }
+.legal-meta strong { color: var(--text-dark); font-weight: 600; }
+
+.legal-box {
+  background: var(--teal-pale); border: 1px solid var(--teal-mid);
+  border-radius: var(--r); padding: 26px 28px; margin-bottom: 48px;
+}
+.legal-box-label {
+  font-family: var(--body); font-size: 10px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--teal-deep);
+  margin-bottom: 14px; display: block;
+}
+.legal-box p { font-family: var(--body); font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-dark); }
+.legal-box a { color: var(--teal-dark); }
+.legal-box a:hover { color: var(--teal); }
+
+.legal-section { margin-bottom: 44px; }
+.legal-section:last-child { margin-bottom: 0; }
+.legal-section h2 {
+  font-family: var(--head); font-size: 22px; font-weight: 700;
+  line-height: 1.3; letter-spacing: -.01em; color: var(--teal-deep);
+  margin-bottom: 16px; scroll-margin-top: 100px;
+}
+.legal-section h3 {
+  font-family: var(--head); font-size: 16px; font-weight: 700;
+  line-height: 1.4; color: var(--text-dark); margin: 20px 0 8px;
+}
+.legal-section p { font-family: var(--body); font-size: 15px; font-weight: 300; line-height: 1.78; color: var(--text); margin-bottom: 14px; }
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section ul { margin: 0 0 14px; }
+.legal-section ul:last-child { margin-bottom: 0; }
+.legal-section li {
+  font-family: var(--body); font-size: 15px; font-weight: 300; line-height: 1.72; color: var(--text);
+  padding-left: 20px; position: relative; margin-bottom: 8px;
+}
+.legal-section li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+.legal-section a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 2px; }
+.legal-section a:hover { color: var(--teal); }
+
+/* =============================================
+   FOOTER
+============================================= */
+.footer { background: var(--teal-deep); padding: 72px 0 40px; }
+.fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.fw { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.fs { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 4px 0 16px; }
+.fd { font-family: var(--body); font-size: 13px; color: rgba(255,255,255,.38); font-weight: 300; line-height: 1.72; max-width: 248px; margin-bottom: 20px; }
+.socials { display: flex; gap: 8px; }
+.soc { width: 33px; height: 33px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.36); transition: all .2s; }
+.soc svg { width: 13px; height: 13px; fill: currentColor; }
+.soc:hover { border-color: var(--teal); color: var(--teal); background: rgba(3,152,158,.12); }
+.fcol-t { font-family: var(--body); font-size: 10.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 16px; }
+.flinks { display: flex; flex-direction: column; gap: 9px; }
+.flinks a { font-family: var(--body); font-size: 13.5px; color: rgba(255,255,255,.48); font-weight: 300; transition: color .2s; }
+.flinks a:hover { color: rgba(255,255,255,.9); }
+.fbot { border-top: 1px solid rgba(255,255,255,.07); padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.fcopy { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; }
+.fleg { display: flex; gap: 20px; }
+.fleg a { font-family: var(--body); font-size: 12px; color: rgba(255,255,255,.2); font-weight: 300; transition: color .2s; }
+.fleg a:hover { color: rgba(255,255,255,.5); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 24px; }
+  .sec { padding: 68px 0; }
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+  .hero-content { padding: 40px 24px 44px; }
+  .legal-section h2 { font-size: 20px; }
+  .fg { grid-template-columns: 1fr; }
+  .fbot { flex-direction: column; text-align: center; }
+  .fleg { flex-wrap: wrap; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="logo-mark.png" alt="Nutricore Health logomark"
+           style="width:38px;height:38px;object-fit:contain;flex-shrink:0;
+                  filter:invert(48%) sepia(79%) saturate(401%) hue-rotate(147deg) brightness(95%) contrast(95%);">
+      <div class="logo-words">
+        <strong>Nutricore Health</strong>
+        <span>Women's Coaching</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/coaching.html">Coaching</a>
+      <a href="/corporate.html">Corporate</a>
+      <a href="/learning.html">Online Learning</a>
+      <a href="/about.html">About</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <a href="/contact.html" class="nav-cta">Get in Touch</a>
+    <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="/coaching.html"  onclick="closeM()">Coaching</a>
+  <a href="/corporate.html" onclick="closeM()">Corporate</a>
+  <a href="/learning.html"  onclick="closeM()">Online Learning</a>
+  <a href="/about.html"     onclick="closeM()">About</a>
+  <a href="/resources.html" onclick="closeM()">Resources</a>
+  <a href="/contact.html"   onclick="closeM()">Contact</a>
+  <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=91669290" class="btn btn-teal" target="_blank" rel="noopener" onclick="closeM()">Book a Free Call</a>
+</div>
+
+<main>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bar"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-text">Legal</span>
+    </div>
+    <h1>Privacy Notice</h1>
+    <p class="hero-sub">How Nutricore Health collects, uses and protects your personal information.</p>
+  </div>
+</section>
+
+<!-- ══ LEGAL CONTENT ══ -->
+<section class="sec legal">
+  <div class="wrap">
+    <div class="legal-inner">
+
+      <div class="legal-meta">
+        <p><strong>Status:</strong> Current — approved for publication</p>
+        <p><strong>Last updated:</strong> 28 September 2026</p>
+        <p><strong>Owner / data controller:</strong> Marie Frost, sole trader trading as Nutricore Health&reg;</p>
+        <p><strong>Privacy contact:</strong> <a href="mailto:marie@nutricorehealth.com" style="color:var(--teal-dark);">marie@nutricorehealth.com</a></p>
+      </div>
+
+      <div class="legal-section">
+        <h2>1. Who we are</h2>
+        <p>Nutricore Health is operated by Marie Frost, sole trader trading as Nutricore Health&reg;. Marie Frost is the data controller for the personal information described in this notice.</p>
+        <div class="legal-box">
+          <span class="legal-box-label">Contact</span>
+          <p>
+            Marie Frost<br>
+            Nutricore Health&reg;<br>
+            27 Hardy Close<br>
+            Chelmsford<br>
+            Essex<br>
+            CM1 1AE<br>
+            Email: <a href="mailto:marie@nutricorehealth.com">marie@nutricorehealth.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Information we may collect</h2>
+        <p>The information we collect depends on how you interact with Nutricore Health and which services you use. It may include:</p>
+        <ul>
+          <li>your name and contact details;</li>
+          <li>date of birth and sex where relevant to the service;</li>
+          <li>occupation, working pattern and relevant lifestyle information;</li>
+          <li>information you provide when making an enquiry or booking a service;</li>
+          <li>payment and transaction information;</li>
+          <li>appointment and service information;</li>
+          <li>questionnaire, food diary and check-in responses;</li>
+          <li>notes and records created as part of delivering your service;</li>
+          <li>communications between you and Nutricore Health;</li>
+          <li>information you choose to provide through our website or forms; and</li>
+          <li>information relating to your use of our website where applicable.</li>
+        </ul>
+        <h3>Health information</h3>
+        <p>If you use one of our private health services, we may also collect information about your physical or mental health. This may include information about symptoms, health conditions, medication, supplements, allergies or intolerances, family health history, lifestyle, sleep, stress, nutrition, movement, hormonal or reproductive health and relevant tests or investigations.</p>
+        <p>Health information is special category personal data under UK data protection law and receives additional protection. We aim to collect only information that is relevant and reasonably necessary to provide the service you have chosen.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Why we use your information</h2>
+        <p>We may use your personal information to:</p>
+        <ul>
+          <li>respond to enquiries;</li>
+          <li>arrange discovery calls and appointments;</li>
+          <li>provide Nutricore Health services;</li>
+          <li>understand your health, circumstances and goals before and during your work with us;</li>
+          <li>prepare for appointments;</li>
+          <li>provide appropriate health coaching, education and practical support;</li>
+          <li>communicate with you about your service;</li>
+          <li>manage bookings and payments;</li>
+          <li>maintain appropriate service and client records;</li>
+          <li>provide continuity of support;</li>
+          <li>enable appropriate Practitioner support, quality assurance and oversight;</li>
+          <li>manage our relationship with you;</li>
+          <li>meet legal, regulatory, insurance, accounting and record-keeping obligations;</li>
+          <li>manage and improve the operation of Nutricore Health; and</li>
+          <li>send marketing communications where we have an appropriate basis to do so.</li>
+        </ul>
+        <p>We do not use your health information for marketing.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Our lawful bases</h2>
+        <p>UK data protection law requires us to have a lawful basis for using personal information. Depending on the circumstances, we may rely on:</p>
+        <p><strong>Contract</strong> &mdash; where using your information is necessary to take steps at your request before entering into a contract or to provide a service you have purchased.</p>
+        <p><strong>Legal obligation</strong> &mdash; where we need to use or retain information to comply with a legal requirement.</p>
+        <p><strong>Legitimate interests</strong> &mdash; where we have a legitimate business reason to use information and your interests, rights and freedoms do not override that reason.</p>
+        <p><strong>Consent</strong> &mdash; where we have asked you to make a genuine choice about a particular use of your information, for example certain marketing communications.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Health and other special category information</h2>
+        <p>Health information requires an additional condition under Article 9 of the UK GDPR as well as an Article 6 lawful basis.</p>
+        <p>Where Nutricore Health needs health information in order to provide a service you have chosen, we ask for your explicit consent to process that health information for that specified purpose.</p>
+        <p>You can withdraw your explicit consent by contacting <a href="mailto:marie@nutricorehealth.com">marie@nutricorehealth.com</a>. Withdrawal does not affect processing that was lawful before consent was withdrawn. Depending on the service and information involved, withdrawing consent may mean that we can no longer provide some or all of the service because we may no longer have the information necessary to do so.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>6. Nutricore Health Practitioners</h2>
+        <p>If you work with a Nutricore Health Practitioner, relevant information may be made available to your assigned Practitioner so they can provide your service.</p>
+        <p>Where appropriate, relevant information may also be accessed by other Nutricore Health Practitioners involved in supporting the delivery, quality and oversight of your service.</p>
+        <p>Access is limited to what is appropriate for the person's role and the service being provided. Nutricore Health Practitioners are expected to handle client information confidentially and in accordance with Nutricore Health's data-protection and professional requirements.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>7. Organisations we use to provide our services</h2>
+        <p>Nutricore Health uses third-party service providers to operate the business and deliver services. These may include providers used for:</p>
+        <ul>
+          <li>business email, document storage and collaboration;</li>
+          <li>website hosting and online forms;</li>
+          <li>workflow automation;</li>
+          <li>booking and appointment management;</li>
+          <li>payment processing;</li>
+          <li>email communications; and</li>
+          <li>other essential business administration.</li>
+        </ul>
+        <p>Current providers may include Google Workspace, Netlify, Make, Stripe and MailerLite where relevant to the service or interaction.</p>
+        <p>These organisations process information for their respective purposes and/or on our behalf under their own contractual and data-protection arrangements.</p>
+        <p>We do not sell your personal information. We do not allow third-party service providers to use client health information for their own marketing purposes.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>8. Payments</h2>
+        <p>Payments may be processed through third-party payment providers such as Stripe. Nutricore Health does not need to store your full payment-card details when those details are collected and processed directly by the payment provider. Payment providers process information in accordance with their own privacy and security arrangements.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>9. Marketing</h2>
+        <p>If you choose to receive marketing communications from Nutricore Health, we may use your name and email address to send relevant news, information and updates.</p>
+        <p>Where consent is the basis for those communications, you can unsubscribe at any time using the unsubscribe option provided or by contacting us.</p>
+        <p>Choosing not to receive marketing communications does not affect your ability to use Nutricore Health services. We do not add you to marketing communications simply because you complete a health questionnaire or purchase a private health service.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>10. Corporate services</h2>
+        <p>If you interact with Nutricore Health through an employer or other organisation, we may receive or process information necessary to organise and deliver the agreed service.</p>
+        <p>Where individual health or wellbeing information is provided directly to a Nutricore Health Practitioner, we do not routinely provide identifiable individual health information to an employer unless there is an appropriate lawful basis and the individual has been clearly informed.</p>
+        <p>Where reporting is provided to an organisation, we aim to use aggregated or non-identifiable information wherever appropriate.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>11. How we protect your information</h2>
+        <p>We take reasonable technical and organisational measures to protect personal information against unauthorised access, loss, misuse, alteration or disclosure. Measures may include:</p>
+        <ul>
+          <li>limiting access according to role and need;</li>
+          <li>using appropriate authentication and access controls;</li>
+          <li>using reputable business systems and service providers;</li>
+          <li>maintaining appropriate client and business records;</li>
+          <li>reviewing access when Practitioner involvement changes; and</li>
+          <li>avoiding unnecessary collection or duplication of sensitive information.</li>
+        </ul>
+        <p>No method of storing or transmitting information can be guaranteed to be completely secure, but we take proportionate steps based on the sensitivity of the information we hold.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>12. International transfers</h2>
+        <p>Some technology providers used by Nutricore Health may process or store information outside the UK. Where UK data-protection law requires safeguards for an international transfer, appropriate transfer mechanisms or safeguards are used by the relevant provider.</p>
+        <p>Nutricore Health reviews the data-processing arrangements of providers handling personal information as part of its privacy and security responsibilities.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>13. How long we keep information</h2>
+        <p>Client health and service records are normally retained for eight years following the end of your last Nutricore Health service. We may retain particular information for longer where reasonably necessary for legal, insurance, safeguarding or dispute purposes.</p>
+        <p>Other business and administrative records may be retained for different periods where required by law or for legitimate business purposes.</p>
+        <p>When information is no longer required, it is securely deleted or anonymised where appropriate.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>14. Your data-protection rights</h2>
+        <p>Depending on the circumstances and the lawful basis being used, you may have rights including:</p>
+        <ul>
+          <li>the right to be informed about how your information is used;</li>
+          <li>the right to ask for access to your personal information;</li>
+          <li>the right to ask us to correct inaccurate or incomplete information;</li>
+          <li>the right to ask us to erase your information in certain circumstances;</li>
+          <li>the right to ask us to restrict how your information is used in certain circumstances;</li>
+          <li>the right to object to certain processing;</li>
+          <li>the right to data portability in certain circumstances; and</li>
+          <li>rights relating to consent, including withdrawing consent where consent is the basis for processing.</li>
+        </ul>
+        <p>Not every right applies in every situation.</p>
+        <p>To exercise your rights or ask a question about your information, contact <a href="mailto:marie@nutricorehealth.com">marie@nutricorehealth.com</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>15. Complaints</h2>
+        <p>If you have concerns about how Nutricore Health uses your personal information, please contact us first so that we can try to resolve the issue.</p>
+        <p>You also have the right to complain to the Information Commissioner's Office (ICO), the UK's data-protection regulator. Information about making a complaint is available on the ICO website.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>16. Changes to this notice</h2>
+        <p>We may update this privacy notice when our services, systems, legal obligations or data-processing arrangements change. The current version will be published on the Nutricore Health website with its latest revision date.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fw">Nutricore Health</div>
+        <span class="fs">Women's Coaching · UK</span>
+        <p class="fd">Practical, evidence-informed health coaching for women 35+. Real support, no fads.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/nutricore_health" class="soc" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/18Jpo8rDbR/?mibextid=wwXIfr" class="soc" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/in/marie-frost-nutricore/" class="soc" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a>
+      <a href="/contact.html">Contact</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=91669290" target="_blank" rel="noopener">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+
+  const mob = document.getElementById('mob');
+  function openM()  { mob.style.display = 'flex'; requestAnimationFrame(() => mob.classList.add('open')); document.body.style.overflow = 'hidden'; }
+  function closeM() { mob.classList.remove('open'); setTimeout(() => mob.style.display = 'none', 300); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>
