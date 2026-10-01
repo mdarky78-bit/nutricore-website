@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1:1 Health Coaching | Nutricore Health</title>
-<meta name="description" content="A structured 12-week health coaching programme for women. Evidence-informed, practical, and built around your life. Meet Marie and Helen.">
+<meta name="description" content="A structured 12-week health coaching programme for women. Evidence-informed, practical, and built around your life. Delivered by Brenda or Caroline, starting with a free Discovery Call.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
@@ -236,6 +236,8 @@ h3 {
 .pricing-hdr .lead { max-width: 560px; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 28px; }
+.pricing-grid.two { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; }
+@media (max-width: 700px) { .pricing-grid.two { grid-template-columns: 1fr; max-width: 480px; } }
 
 .price-card {
   border-radius: 8px; overflow: hidden;
@@ -546,13 +548,12 @@ h3 {
     <div class="nav-links">
       <a href="/coaching.html" class="active">Coaching</a>
       <a href="/corporate.html">Corporate</a>
-      <a href="/learning.html">Online Learning</a>
       
       <a href="/about.html">About</a>
       <a href="/resources.html">Resources</a>
       <a href="/contact.html">Contact</a>
     </div>
-    <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+    <a href="#pricing" class="nav-cta">Book a Call</a>
     <div class="ham" onclick="openM()"><span></span><span></span><span></span></div>
   </div>
 </nav>
@@ -560,12 +561,11 @@ h3 {
 <div class="mob" id="mob">
   <a href="/coaching.html" onclick="closeM()">Coaching</a>
   <a href="/corporate.html" onclick="closeM()">Corporate</a>
-  <a href="/learning.html"  onclick="closeM()">Online Learning</a>
   
   <a href="/about.html"    onclick="closeM()">About</a>
   <a href="/resources.html" onclick="closeM()">Resources</a>
   <a href="/contact.html"  onclick="closeM()">Contact</a>
-  <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-teal" target="_blank" rel="noopener" onclick="closeM()">Book a Free Call</a>
+  <a href="#pricing" class="btn btn-teal" onclick="closeM()">Book a Free Call</a>
 </div>
 
 <!-- ══ HERO ══ -->
@@ -581,9 +581,9 @@ h3 {
       <span class="hero-tag-text">1:1 Health Coaching · 12 Weeks</span>
     </div>
     <h1>A plan built<br>around <span class="pk">your</span><br>real life.</h1>
-    <p class="hero-sub">12 weeks. Five pillars. One coach dedicated to you. No guesswork, no generic programmes.</p>
+    <p class="hero-sub">12 weeks. Five pillars. One named coach, backed by the Nutricore Health team.</p>
     <div class="hero-btns">
-      <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-white" target="_blank" rel="noopener">Book a Free Call</a>
+      <a href="#pricing" class="btn btn-white">Book a Free Call</a>
       <a href="#pricing" class="btn btn-outw">See Pricing</a>
     </div>
   </div>
@@ -599,12 +599,12 @@ h3 {
     <div class="proof-div"></div>
     <div class="proof-item">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      <span>Registered naturopathic health coaches</span>
+      <span>Choose Brenda or Caroline</span>
     </div>
     <div class="proof-div"></div>
     <div class="proof-item">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      <span>Flexible payment options available</span>
+      <span>Named coach, backed by the Nutricore team</span>
     </div>
     <div class="proof-div"></div>
     <div class="proof-item">
@@ -630,46 +630,46 @@ h3 {
             <span class="inc-num">01</span>
             <div class="inc-detail">
               <strong>Full health intake</strong>
-              <span>A detailed questionnaire and a 4-day food diary, completed before session one. Your coach reviews everything ahead of the call so the first session gets straight into what matters.</span>
+              <span>A detailed questionnaire and a 4-day food diary, completed before your programme begins. Your coach reviews everything ahead of your first session so it gets straight into what matters.</span>
             </div>
           </div>
           <div class="inc-item">
             <span class="inc-num">02</span>
             <div class="inc-detail">
-              <strong>Fortnightly 1:1 sessions</strong>
-              <span>Thirty minutes, every two weeks. Online. Focused on your priorities, not a fixed script.</span>
+              <strong>90-minute initial consultation, then fortnightly 1:1 sessions</strong>
+              <span>Your coaching starts with a 90-minute consultation. Fortnightly 1:1 sessions follow across the 12 weeks, focused on your priorities, not a fixed script.</span>
             </div>
           </div>
           <div class="inc-item">
             <span class="inc-num">03</span>
             <div class="inc-detail">
               <strong>Weekly check-ins</strong>
-              <span>A short prompt each week to track energy, sleep, and resilience. Keeps you accountable without adding to your to-do list.</span>
+              <span>A short weekly check-in and accountability, so you are not working on your own between sessions.</span>
             </div>
           </div>
           <div class="inc-item">
             <span class="inc-num">04</span>
             <div class="inc-detail">
-              <strong>Recipes, resources &amp; guides</strong>
-              <span>Practical support materials alongside your plan. Evidence-based, not trend-led.</span>
+              <strong>Practical resources</strong>
+              <span>Support materials alongside your plan. Evidence-based, not trend-led.</span>
             </div>
           </div>
           <div class="inc-item">
             <span class="inc-num">05</span>
             <div class="inc-detail">
-              <strong>Final 30-minute review</strong>
-              <span>A proper close. Progress reflected on, outcomes assessed, and next steps decided together — including the option of a personalised extended support plan to maintain and build on what you've achieved.</span>
+              <strong>Final review</strong>
+              <span>A review of your progress, with personalised next steps.</span>
             </div>
           </div>
           <div class="inc-item">
             <span class="inc-num">06</span>
             <div class="inc-detail">
-              <strong>Nutricore Health Community Hub</strong>
-              <span>Included throughout your 12-week programme. Live sessions with Marie on key topics, guest speakers, Q&amp;As, a short-video resource library, recipe inspiration, and a community of other Nutricore clients for support and motivation between your 1:1 calls. Access continues with any ongoing 1:1 work, or as a community-only membership at £25 per month.</span>
+              <strong>Your coach, backed by our team</strong>
+              <span>Your named coach manages your coaching and is your main point of contact. The wider Nutricore Health team is available behind the scenes when extra expertise would help, within appropriate scope.</span>
             </div>
           </div>
         </div>
-        <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-teal" target="_blank" rel="noopener">Book a Free Discovery Call</a>
+        <a href="#pricing" class="btn btn-teal">Book a Free Discovery Call</a>
       </div>
     </div>
   </div>
@@ -693,19 +693,19 @@ h3 {
         <span class="step-bg-num">02</span>
         <span class="step-num">Step 02</span>
         <h3>Health Intake</h3>
-        <p class="body-txt">A detailed health questionnaire plus a 4-day food diary, completed before session one. Your coach reviews everything ahead of the call — so the first session gets straight to the point.</p>
+        <p class="body-txt">A detailed health questionnaire plus a 4-day food diary, completed before your programme begins. Your coach reviews everything ahead of your first session.</p>
       </div>
       <div class="step rv d3">
         <span class="step-bg-num">03</span>
         <span class="step-num">Step 03</span>
-        <h3>Session One</h3>
-        <p class="body-txt">An in-depth 1:1 to understand your baseline, your priorities, and what's actually going on. Your personalised action plan follows.</p>
+        <h3>Initial Consultation</h3>
+        <p class="body-txt">A 90-minute 1:1 to understand your baseline, your priorities, and what's actually going on.</p>
       </div>
       <div class="step rv d4">
         <span class="step-bg-num">04</span>
         <span class="step-num">Step 04</span>
         <h3>Your Programme</h3>
-        <p class="body-txt">Fortnightly 1:1 sessions, weekly check-ins, and a 30-minute final review. Twelve weeks of support with someone who actually knows your situation.</p>
+        <p class="body-txt">Fortnightly 1:1 sessions, weekly check-ins, and a final review with personalised next steps. Twelve weeks of support with someone who actually knows your situation.</p>
       </div>
     </div>
   </div>
@@ -715,85 +715,73 @@ h3 {
 <section class="sec pricing" id="pricing">
   <div class="wrap">
     <div class="pricing-hdr rv">
-      <span class="eyebrow">Transparent Pricing</span>
+      <span class="eyebrow">Private Coaching · £585</span>
       <h2>Choose your <span class="tc">coach.</span></h2>
-      <p class="lead">Marie, Helen, and Caroline are all registered naturopathic health coaches, qualified through the College of Naturopathic Medicine. Every programme has clinical oversight from Marie regardless of who delivers it.</p>
+      <p class="lead">Private Coaching is delivered by Brenda or Caroline. It is not booked directly. Start with a free 20-minute Discovery Call with the coach you would like to work with, to talk through what you need and check the programme suits you. If you decide to go ahead, your coach will agree payment with you.</p>
     </div>
-    <div class="pricing-grid rv d1">
+    <div class="pricing-grid two rv d1">
 
-      <!-- Helen -->
-      <div class="price-card">
+      <!-- Brenda -->
+      <div class="price-card ">
         <div class="pc-photo">
-          <img src="photo-helen.jpg" alt="Helen Lancaster — Nutricore Health Coach">
+          <img src="photo-brenda.jpg" alt="Brenda Johnson, Nutricore Health Coach">
           <div class="pc-photo-overlay"></div>
           <div class="pc-photo-text">
-            <span class="pc-name">Associate Coach</span>
-            <span class="pc-coach">Helen Lancaster</span>
-            <span class="pc-role">Naturopathic Health Coach · CNM qualified</span>
+            <span class="pc-name">Associate Health Coach</span>
+            <span class="pc-coach">Brenda Johnson</span>
+            <span class="pc-role">Health Coach &amp; qualified chef</span>
           </div>
         </div>
         <div class="pc-body">
-          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Helen came to health coaching through her own midlife experience — the point where what had worked before simply stopped. She works with women who want realistic strategies that fit real life, not a complete overhaul.</p>
+          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Brenda is a Nutricore Health Coach and a qualified chef. She delivers the 12-week Private Coaching programme and the Personal Health Review, and she runs the Food Inspiration Session.</p>
           <div class="price-main">
             <span class="currency">£</span>
             <span class="amount">585</span>
           </div>
-          <p class="price-note">12-week programme · Payment plans available</p>
+          <p class="price-note">12-week programme · Starts with a free 20-minute Discovery Call</p>
           <ul class="pc-feats">
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full health intake &amp; 4-day food diary review
+              Health Intake Questionnaire &amp; 4-Day Food Diary before you start
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              6 x fortnightly 30-minute 1:1 sessions
+              90-minute initial consultation
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Weekly check-in prompts &amp; accountability
+              Fortnightly 1:1 coaching sessions across the 12 weeks
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Recipes, resources &amp; guides
+              Weekly check-ins &amp; accountability
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              30-minute final review &amp; personalised next steps
+              Practical resources
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Clinical oversight &amp; supplement review by Marie throughout
+              Final review with personalised next steps
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Private test facilitation &amp; analysis where required
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Discounted dispensary access for high-quality supplements
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Nutricore Health Community Hub — included throughout the programme. Continues with ongoing 1:1 work, or as community-only access at £25/month
+              Named coach, backed by the Nutricore Health team
             </li>
           </ul>
           <div class="pc-ctas">
-            <a href="https://app.acuityscheduling.com/catalog.php?owner=39002227&amp;action=addCart&amp;clear=1&amp;id=2193460" class="btn btn-teal" target="_blank" rel="noopener">Pay in Full — £585</a>
-            <p class="pc-installment-note">or spread the cost</p>
-            <a href="https://app.acuityscheduling.com/catalog.php?owner=39002227&amp;action=addCart&amp;clear=1&amp;id=2193463" class="btn btn-out" target="_blank" rel="noopener">3 Monthly Instalments — £195/month</a>
-            <div class="pc-cta-divider"><span>not ready yet?</span></div>
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-out" target="_blank" rel="noopener">Book a Free Discovery Call</a>
+            <a href="https://calendar.app.google/bW4oeon8gCdbbB3A6" class="btn btn-teal" target="_blank" rel="noopener">Book a Discovery Call with Brenda</a>
           </div>
         </div>
       </div>
 
       <!-- Caroline -->
-      <div class="price-card rv d2">
+      <div class="price-card ">
         <div class="pc-photo">
-          <img src="photo-caroline.jpg" alt="Caroline — Nutricore Health Coach">
+          <img src="photo-caroline.jpg" alt="Caroline, Nutricore Health Coach">
           <div class="pc-photo-overlay"></div>
           <div class="pc-photo-text">
-            <span class="pc-name">Associate Coach</span>
+            <span class="pc-name">Associate Health Coach</span>
             <span class="pc-coach">Caroline</span>
             <span class="pc-role">Naturopathic Health Coach · CNM qualified</span>
           </div>
@@ -804,111 +792,39 @@ h3 {
             <span class="currency">£</span>
             <span class="amount">585</span>
           </div>
-          <p class="price-note">12-week programme · Payment plans available</p>
+          <p class="price-note">12-week programme · Starts with a free 20-minute Discovery Call</p>
           <ul class="pc-feats">
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full health intake &amp; 4-day food diary review
+              Health Intake Questionnaire &amp; 4-Day Food Diary before you start
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              6 x fortnightly 30-minute 1:1 sessions
+              90-minute initial consultation
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Weekly check-in prompts &amp; accountability
+              Fortnightly 1:1 coaching sessions across the 12 weeks
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Recipes, resources &amp; guides
+              Weekly check-ins &amp; accountability
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              30-minute final review &amp; personalised next steps
+              Practical resources
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Clinical oversight &amp; supplement review by Marie throughout
+              Final review with personalised next steps
             </li>
             <li class="pc-feat">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Private test facilitation &amp; analysis where required
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Discounted dispensary access for high-quality supplements
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Nutricore Health Community Hub — included throughout the programme. Continues with ongoing 1:1 work, or as community-only access at £25/month
+              Named coach, backed by the Nutricore Health team
             </li>
           </ul>
           <div class="pc-ctas">
-            <a href="https://app.acuityscheduling.com/catalog.php?owner=39002227&amp;action=addCart&amp;clear=1&amp;id=2209012" class="btn btn-teal" target="_blank" rel="noopener">Pay in Full — £585</a>
-            <p class="pc-installment-note">or spread the cost</p>
-            <a href="https://app.acuityscheduling.com/catalog.php?owner=39002227&amp;action=addCart&amp;clear=1&amp;id=2209013" class="btn btn-out" target="_blank" rel="noopener">3 Monthly Instalments</a>
-            <div class="pc-cta-divider"><span>not ready yet?</span></div>
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=92903329" class="btn btn-out" target="_blank" rel="noopener">Book a Free Discovery Call</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Marie -->
-      <div class="price-card featured rv d3">
-        <div class="pc-photo">
-          <img src="photo-marie-session.jpg" alt="Marie Frost — Nutricore Health founder">
-          <div class="pc-photo-overlay"></div>
-          <span class="pc-badge avail">Limited availability</span>
-          <div class="pc-photo-text">
-            <span class="pc-name">Founder &amp; Clinical Lead</span>
-            <span class="pc-coach">Marie Frost</span>
-            <span class="pc-role">Naturopathic Health Coach &amp; Nutritional Therapist</span>
-          </div>
-        </div>
-        <div class="pc-body">
-          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Marie founded Nutricore Health with a clear mission: cut through the noise. As clinical lead, she takes a small number of her own clients alongside her oversight and business development work.</p>
-          <div class="price-main">
-            <span class="currency">£</span>
-            <span class="amount">785</span>
-          </div>
-          <p class="price-note">12-week programme · Contact to discuss</p>
-          <ul class="pc-feats">
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full health intake &amp; 4-day food diary review
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              6 x fortnightly 30-minute 1:1 sessions
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Weekly check-in prompts &amp; accountability
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Recipes, resources &amp; guides
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              30-minute final review &amp; personalised next steps
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Supplement review &amp; private test facilitation where required
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Discounted dispensary access for high-quality supplements
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Nutricore Health Community Hub — included throughout the programme. Continues with ongoing 1:1 work, or as community-only access at £25/month
-            </li>
-          </ul>
-          <div class="pc-ctas">
-            <a href="mailto:marie@nutricorehealth.com" class="btn btn-teal">Enquire About Availability</a>
-            <p class="pc-installment-note">Email marie@nutricorehealth.com to discuss</p>
+            <a href="https://calendar.app.google/PrVwT5QUTtd3qjDeA" class="btn btn-teal" target="_blank" rel="noopener">Book a Discovery Call with Caroline</a>
           </div>
         </div>
       </div>
@@ -917,6 +833,86 @@ h3 {
 
     <div class="pricing-team-link rv d3">
       <a href="/about.html">Meet the full Nutricore Health team &rarr;</a>
+    </div>
+
+    <div class="pricing-hdr rv" id="other-services" style="margin-top:72px;">
+      <span class="eyebrow">One-off sessions</span>
+      <h2>Personal support without the <span class="tc">12 weeks.</span></h2>
+      <p class="lead">Both sessions can be booked directly. After you book, you will get a separate email with payment details. Pre-session forms are sent once payment is confirmed.</p>
+    </div>
+    <div class="pricing-grid two rv d1">
+
+      <!-- Personal Health Review -->
+      <div class="price-card">
+        <div class="pc-body">
+          <h3 style="font-family:var(--head);font-size:22px;font-weight:700;color:var(--teal-deep);margin-bottom:6px;">Personal Health Review</h3>
+          <p class="price-note" style="margin-bottom:14px;">With Brenda or Caroline</p>
+          <div class="price-main">
+            <span class="currency">£</span>
+            <span class="amount">150</span>
+          </div>
+          <p class="price-note">75 minutes · One-off, no ongoing coaching</p>
+          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Personalised health and nutrition support without the ongoing coaching and accountability of the 12-week programme.</p>
+          <ul class="pc-feats">
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Pre-consultation health questionnaire
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              4-Day Food Diary completed in advance
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              75-minute one-to-one consultation
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Personalised plan following the consultation
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Supporting resources where appropriate
+            </li>
+          </ul>
+          <p class="price-note">It does not include ongoing check-ins, accountability or between-session support. Please complete both forms at least 48 hours before your session.</p>
+          <div class="pc-ctas">
+            <a href="https://calendar.app.google/Sj4Fe48wc5p1Zgvo6" class="btn btn-teal" target="_blank" rel="noopener">Book with Brenda</a>
+            <a href="https://calendar.app.google/oP2yk5Ph3TUegimcA" class="btn btn-out" target="_blank" rel="noopener">Book with Caroline</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Inspiration Session -->
+      <div class="price-card">
+        <div class="pc-body">
+          <h3 style="font-family:var(--head);font-size:22px;font-weight:700;color:var(--teal-deep);margin-bottom:6px;">Food Inspiration Session</h3>
+          <p class="price-note" style="margin-bottom:14px;">With Brenda</p>
+          <div class="price-main">
+            <span class="currency">£</span>
+            <span class="amount">75</span>
+          </div>
+          <p class="price-note">60 minutes · One-off session</p>
+          <p style="font-family:var(--body);font-size:13px;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cream-dark);">Practical food inspiration and health-coaching support for everyday food decisions, with Brenda as a Health Coach and qualified chef.</p>
+          <ul class="pc-feats">
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              60-minute one-to-one session online
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Short pre-session form, completed at least 48 hours before
+            </li>
+            <li class="pc-feat">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              No food diary needed
+            </li>
+          </ul>
+          <div class="pc-ctas">
+            <a href="https://calendar.app.google/PYprUoH1ebqXkJFH9" class="btn btn-teal" target="_blank" rel="noopener">Book with Brenda</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1030,9 +1026,17 @@ h3 {
         <span class="eyebrow">Common Questions</span>
         <h2>Things people<br>usually <span class="tc">ask first.</span></h2>
         <p class="lead">Straight answers. If something isn't covered here, book a discovery call — that's what they're for.</p>
-        <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-out" target="_blank" rel="noopener" style="margin-top: 8px;">Book a Free Call</a>
+        <a href="#pricing" class="btn btn-out" style="margin-top: 8px;">Book a Free Call</a>
       </div>
       <div class="faq-list rv d2">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Can I book the 12-week programme directly?</span>
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">No. Start with a free 20-minute Discovery Call with Brenda or Caroline. You talk through what you need, check the programme is the right fit and ask any questions. If you decide to go ahead, your coach will agree payment with you.</div>
+        </div>
 
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
@@ -1044,10 +1048,10 @@ h3 {
 
           <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
-            <span>What's the difference between Marie, Helen, and Caroline?</span>
+            <span>How do I choose between Brenda and Caroline?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">All three are registered naturopathic health coaches, qualified through the College of Naturopathic Medicine, and every programme includes the same clinical support from Marie — supplement review, private test facilitation where needed, and full clinical oversight throughout. The difference is who delivers your 1:1 sessions. Helen and Caroline work with you directly on a fortnightly basis, with Marie working behind the scenes on the clinical side. Working with an associate is genuinely great value — you get the full Nutricore clinical resource at a lower price point. Marie takes a small number of her own clients directly alongside her clinical and business development work, so her availability is limited. Not sure which suits you? Email marie@nutricorehealth.com to discuss.</div>
+          <div class="faq-a">Brenda and Caroline both deliver the same 12-week programme. Your named coach manages your coaching and is your main point of contact, and the wider Nutricore Health team is available behind the scenes when extra expertise would help. Brenda is also a qualified chef and runs the Food Inspiration Session. Book a free Discovery Call with whichever of them you would like to speak to first.</div>
         </div>
 
         <div class="faq-item">
@@ -1063,7 +1067,7 @@ h3 {
             <span>How much time will this take each week?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">One 30-minute call every two weeks, plus a short weekly check-in that takes a few minutes to complete. The work itself — the habit changes, the small shifts — is built around your actual schedule. This is not a programme that adds to your to-do list. It's designed to work with the life you already have.</div>
+          <div class="faq-a">One 1:1 session every two weeks, plus a short weekly check-in that takes a few minutes to complete. The work itself, the habit changes and the small shifts, is built around your actual schedule. This is not a programme that adds to your to-do list. It's designed to work with the life you already have.</div>
         </div>
 
         <div class="faq-item">
@@ -1079,7 +1083,7 @@ h3 {
             <span>Are supplements part of the programme?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">Food comes first — always. That said, Marie reviews your supplement status and current stack as part of every coaching programme, regardless of which coach delivers your sessions. If there are gaps or anything that isn't serving you, that gets addressed. Where private testing is relevant, Marie can facilitate and analyse that too. Clients on all programmes have access to a discounted dispensary for high-quality products at better-than-retail prices. Nothing is pushed. Everything is considered in the context of your full picture.</div>
+          <div class="faq-a">Supplements are not a core part of the programme. Your plan starts with sleep, resilience, nutrition, movement and joy. If supplements come up, your coach will talk it through with you within the scope of their role.</div>
         </div>
 
         <div class="faq-item">
@@ -1087,7 +1091,7 @@ h3 {
             <span>What happens after the 12 weeks?</span>
             <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
           </div>
-          <div class="faq-a">The final session is a proper review — outcomes assessed, progress acknowledged, next steps discussed. After the programme, you have a few options. Continue with 1:1 coaching on whatever frequency suits you, and your Community Hub access continues alongside it. Or step back from 1:1 work and keep your Community Hub access on its own at £25 per month — the live sessions, resource library, recipes, and community remain available. Some clients feel ready to continue independently. There's no pressure either way.</div>
+          <div class="faq-a">The programme ends with a final review of your progress and personalised next steps. What happens after that is for you and your coach to talk through. There's no pressure either way.</div>
         </div>
 
       </div>
@@ -1104,7 +1108,7 @@ h3 {
         <p class="body-txt">20 minutes. No obligation. We'll work out whether this is the right fit — and if it is, what happens next.</p>
       </div>
       <div class="cta-btns">
-        <a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" class="btn btn-white" target="_blank" rel="noopener">Book Free Call</a>
+        <a href="#pricing" class="btn btn-white">Book Free Call</a>
         <a href="/contact.html" class="btn btn-outw">Get in Touch</a>
       </div>
     </div>
@@ -1125,14 +1129,14 @@ h3 {
           <a href="https://www.linkedin.com/in/marie-frost-nutricore/" class="soc" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         </div>
       </div>
-      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a><a href="/learning.html">Online Learning</a></div></div>
+      <div><div class="fcol-t">Services</div><div class="flinks"><a href="/coaching.html">1:1 Health Coaching</a><a href="/corporate.html">Corporate Wellbeing</a></div></div>
       <div><div class="fcol-t">Company</div><div class="flinks"><a href="/about.html">About Us</a><a href="/about.html#team">Our Coaches</a><a href="/resources.html">Resources</a>
       <a href="/contact.html">Contact</a></div></div>
-      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="https://app.acuityscheduling.com/schedule.php?owner=39002227&amp;appointmentType=93585870" target="_blank" rel="noopener">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a><a href="/learning.html">Browse Courses</a></div></div>
+      <div><div class="fcol-t">Get Started</div><div class="flinks"><a href="#pricing">Book a Discovery Call</a><a href="/corporate.html">Corporate Enquiry</a></div></div>
     </div>
     <div class="fbot">
-      <div class="fcopy">© 2026 Nutricore Health. All rights reserved. Registered in England &amp; Wales.</div>
-      <div class="fleg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/cookies.html">Cookie Policy</a></div>
+      <div class="fcopy">© 2026 Nutricore Health&reg; | Nutricore Health&reg; is a trading name of Marie Frost.</div>
+      <div class="fleg"><a href="/privacy.html">Privacy Policy</a></div>
     </div>
   </div>
 </footer>
